@@ -1,0 +1,25 @@
+spring:
+  profiles:
+    active:
+    - local
+---
+env: local
+spring:
+  profiles: local
+details:
+    title: Research
+    description: I'm a dog chasing cars. I wouldn't know what to do with one if I caught it! I just do things.
+    version: 1.0
+#server:
+#  context-path: /research
+security:
+  basic:
+    enabled: false
+filepath:
+  soucefiles:
+    sourcefile1: src/main/resources/Source1.txt
+    sourcefile2: src/main/resources/Source2.txt
+  targetfiles:
+    targetfile0: src/main/resources/Target0.txt
+    targetfile1: src/main/resources/Target1.txt
+    targetfile2: src/main/resources/Target2.txt
