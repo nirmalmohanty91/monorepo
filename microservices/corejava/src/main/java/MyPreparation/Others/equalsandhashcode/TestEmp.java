@@ -13,6 +13,7 @@ public class TestEmp {
     //System.out.println(e1.equals(e2));
     Map<Emp, String> map = new HashMap<>();
     map.put(e1,"Hi");
+    System.out.println("#######");
     map.put(e2,"Hello");
     /**if you don't override equals() & hashcode(), the size of map will be 2. Because the default implementation
      * of equals() is:
@@ -30,5 +31,15 @@ public class TestEmp {
         are not planning to use the class as Hash table key, then it will not create any problem.
      */
     System.out.println(map.size());
+
+    Map<Student, String> studentStringMap = new HashMap<>();
+
+    
+
+
+
+
+
+
   }
 }
