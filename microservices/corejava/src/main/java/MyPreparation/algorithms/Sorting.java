@@ -55,22 +55,22 @@ public class Sorting {
   }
 
   /**
-   * This is not the best sorting algorithm in terms of performance But it is little more efficient
-   * than selection sort and bubble sort The time complexity is O(n) for best case There also can be
+   * This is not the best sorting algorithm in terms of performance. But it is little more efficient
+   * than SELECTION SORT & BUBBLE SORT. The time complexity is O(n) for best case. There also can be
    * reverse sorted array, which will be the worst case scenario and the time complexity will be
    * O(n2)
    */
   public static int[] insertionSort(int[] numbers) {
-
+    //Starting from index 1
     for (int i = 1; i < numbers.length; i++) {
       int value = numbers[i];
-      int hole = i;
+      int markerIndex = i;
 
-      while (hole > 0 && numbers[hole - 1] > value) {
-        numbers[hole] = numbers[hole - 1];
-        hole = hole - 1;
+      while (markerIndex > 0 && numbers[markerIndex - 1] > value) {
+        numbers[markerIndex] = numbers[markerIndex - 1];
+        markerIndex = markerIndex - 1;
       }
-      numbers[hole] = value;
+      numbers[markerIndex] = value;
     }
     return numbers;
   }
