@@ -1,17 +1,7 @@
 package MyPreparation.algorithms;
 
-// Takes O(n) time
-
 public class Searching {
-
-  public static void main(String[] args) {
-    int[] intArray = {78, 32, 12, 98, 67};
-     System.out.println(Searching.linearSearch(intArray, 78));
-    // For Binary Search the input array should be a sorted one;
-    int[] sortedArray = Sorting.bubbleSort1(intArray);
-    System.out.println(Searching.binarySearch(sortedArray, 780));
-  }
-
+  /** Takes O(n) time */
   public static boolean linearSearch(int[] array, int value) {
     boolean found = false;
     for (int a : array) {

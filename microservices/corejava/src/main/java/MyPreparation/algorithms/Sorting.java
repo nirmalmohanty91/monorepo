@@ -1,15 +1,6 @@
 package MyPreparation.algorithms;
 
-import java.util.Arrays;
-
 public class Sorting {
-
-  public static void main(String[] args) {
-    // int[] numbers = new int[] {12, 89, 1, 67, 5, 23};
-    int[] numbers = {12, 89, 1, 67, 5, 23};
-
-    for (int i : Sorting.mergeSort(numbers)) System.out.print(i + " ");
-  }
 
   /**
    * The time complexity of this algorithm is O(n2) Bubble sort is in place and stable sorting
@@ -100,9 +91,7 @@ public class Sorting {
   }
 
   /**
-   *
-   * @param numbers
-   * @return
+   * O(nlog n): Worst case running time. O(n): In-terms of space complexity. Non in-place sorting
    */
   public static int[] mergeSort(int[] numbers) {
     int length = numbers.length;
@@ -114,36 +103,25 @@ public class Sorting {
     int[] leftArray = new int[mid];
     int[] rightArray = new int[length - mid];
 
-    for (int i = 0; i < mid ; i++) {
+    for (int i = 0; i < mid; i++) {
       leftArray[i] = numbers[i];
     }
 
     for (int i = mid; i < length; i++) {
       rightArray[i - mid] = numbers[i];
     }
-
-    Sorting.mergeSort(leftArray);
-//    System.out.println("After recursion call of left array...");
-//    Arrays.stream(leftArray).forEach(System.out::println);
-    Sorting.mergeSort(rightArray);
-    //    System.out.println("After recursion call of right array...");
-    //    Arrays.stream(rightArray).forEach(System.out::println);
+    mergeSort(leftArray);
+    mergeSort(rightArray);
 
     return Sorting.merge(leftArray, rightArray, numbers);
   }
 
-  /**
-   * This method takes two sorted arrays and merges them back to main array
-   * @param leftArray
-   * @param rightArray
-   * @param numbers
-   * @return numbers merged array
-   */
+  /** This method takes two sorted arrays and merges them back to main array */
   private static int[] merge(int[] leftArray, int[] rightArray, int[] numbers) {
 
-    int i = 0; //left array start index
-    int j = 0; //right array start index
-    int k = 0; //main array start index
+    int i = 0; // left array start index
+    int j = 0; // right array start index
+    int k = 0; // main array start index
 
     while (i < leftArray.length && j < rightArray.length) {
       if (leftArray[i] <= rightArray[j]) {
@@ -169,5 +147,37 @@ public class Sorting {
     }
 
     return numbers;
+  }
+
+  /**
+   * O(nlog n): Average case running time. O(n2): Worst case running time(This can always avoided
+   * using randomized version of QuickSOrt). This is an in-place sorting algorithm)
+   */
+  public static int[] quickSort(int[] numbers, int start, int end) {
+    if (start < end) {
+      int partitionIndex = Sorting.partition(numbers, start, end);
+      quickSort(numbers, start, partitionIndex - 1);
+      quickSort(numbers, partitionIndex + 1, end);
+    }
+    return numbers;
+  }
+
+  public static int partition(int[] array, int start, int end) {
+    int pivot = array[end];
+    int partitionIndex = start;
+
+    for (int i = start; i < end; i++) {
+      if (array[i] <= pivot) {
+        int temp = array[i];
+        array[i] = array[partitionIndex];
+        array[partitionIndex] = temp;
+        partitionIndex++;
+      }
+    }
+
+    int temp = array[partitionIndex];
+    array[partitionIndex] = array[end];
+    array[end] = temp;
+    return partitionIndex;
   }
 }
