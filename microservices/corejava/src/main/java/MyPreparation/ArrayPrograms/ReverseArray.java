@@ -1,4 +1,4 @@
-package MyPreparation.datastructureprograms;
+package MyPreparation.ArrayPrograms;
 
 import java.util.Arrays;
 
@@ -8,13 +8,13 @@ public class ReverseArray {
 
     for (int i = 0; i < numbers.length / 2; i++) {
       int other = (numbers.length - 1) - i;
-      // swapping
+      // Swapping using temp variable
      /**
       int temp = numbers[other];
       numbers[other] = numbers[i];
       numbers[i] = temp;
       */
-      // OR
+      // Swapping without using 3rd variable
       numbers[other] = numbers[other] + numbers [i];
       numbers[i] = numbers[other]  - numbers[i];
       numbers[other] = numbers[other] - numbers[i];

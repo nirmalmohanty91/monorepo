@@ -12,7 +12,7 @@ public class Searching {
     }
     return found;
   }
-
+/**Time complexity O(log n)*/
   public static boolean binarySearch(int[] array, int value) {
 
     boolean found = false;

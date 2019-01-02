@@ -1,4 +1,4 @@
-package MyPreparation.datastructureprograms;
+package MyPreparation.ArrayPrograms;
 
 public class PrintingStars {
 
