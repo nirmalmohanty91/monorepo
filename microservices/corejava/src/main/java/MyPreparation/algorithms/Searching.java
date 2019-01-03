@@ -18,6 +18,7 @@ public class Searching {
     boolean found = false;
     int lowerIndex = 0;
     int higherIndex = array.length - 1;
+
     while (lowerIndex < higherIndex) {
       int midIndex = lowerIndex + (higherIndex - lowerIndex) / 2;
       if (value == array[midIndex]) {
