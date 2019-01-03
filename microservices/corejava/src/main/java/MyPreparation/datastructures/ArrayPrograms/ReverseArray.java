@@ -1,4 +1,4 @@
-package MyPreparation.ArrayPrograms;
+package MyPreparation.datastructures.ArrayPrograms;
 
 import java.util.Arrays;
 

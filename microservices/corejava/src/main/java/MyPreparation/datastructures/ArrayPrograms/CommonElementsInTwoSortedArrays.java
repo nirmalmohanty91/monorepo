@@ -1,4 +1,4 @@
-package MyPreparation.ArrayPrograms;
+package MyPreparation.datastructures.ArrayPrograms;
 
 import MyPreparation.algorithms.Searching;
 
