@@ -1,7 +1,8 @@
 package MyPreparation.datastructures.linkedlist.SLL;
 
 class SinglyLinkedListOperations {
-  /** INSERT */
+  /** INSERT operations */
+  /** Insert at position */
   public Node insertInLinkedList(Node head, int data, int position) {
     int k = 1;
     Node ptr1 = null;
@@ -25,7 +26,7 @@ class SinglyLinkedListOperations {
 
     return head;
   }
-  // Insert at the end
+  /** Insert at the end */
   public Node insetAtEnd(Node head, int data) {
     Node newNode = new Node(data);
     if (head == null) return newNode;
@@ -36,7 +37,7 @@ class SinglyLinkedListOperations {
     current.next = newNode;
     return head;
   }
-  // Method to print the linked list
+  /** Traverse linked list */
   public static void printList(Node node) {
     while (node != null) {
       System.out.print(node.data + " ");
@@ -44,15 +45,19 @@ class SinglyLinkedListOperations {
     }
     System.out.println();
   }
-  /** DELETE */
-  // Deleting Fist node
+  /** DELETE operations */
+  /** Delete fist node of the list */
   public static Node deleteFirstNode(Node head) {
-    if (head == null || head.next == null)
-      System.out.println("List is empty/Only one element is present");
+
+    if (head == null) {
+      System.out.println("List is empty");
+      return head;
+    }
+
     head = head.next;
     return head;
   }
-  // Deleting the las node
+  /** Deleting the last node */
   public static Node deleteLastNode(Node head) {
     if (head == null || head.next == null)
       System.out.println("List is empty/Only one element is present");
@@ -66,7 +71,7 @@ class SinglyLinkedListOperations {
     ptr2.next = null;
     return head;
   }
-  // Deleting from middle
+  /** Deleting node from particular position */
   public static Node deleteFromPosition(Node head, int position) {
     if (head == null || head.next == null)
       System.out.println("List is empty/Only one element is present");
@@ -86,5 +91,26 @@ class SinglyLinkedListOperations {
       ptr2.next = ptr1.next;
       return head;
     }
+  }
+
+  /** Reverse linked list */
+  public static Node reverse(Node head) {
+
+    if (head == null || head.next == null) {
+      return head;
+    }
+
+    Node current;
+    Node prev = null;
+
+    while (head != null) {
+      current = head.next;
+      head.next = prev;
+      prev = head;
+      head = current;
+    }
+
+    head = prev;
+    return head;
   }
 }

@@ -11,15 +11,17 @@ public class DriverProgram {
     DriverProgram.head.next.next.next = new Node(4);
     DriverProgram.head.next.next.next.next = new Node(10);
     // Printing Linked List
-    System.out.println("Linked List items before any operation: ");
-    SinglyLinkedListOperations.printList(head);
+    //    System.out.println("Linked List items before any operation: ");
+    //    SinglyLinkedListOperations.printList(head);
 
+    //    System.out.println("Reversing linked list");
+    //    SinglyLinkedListOperations.printList(SinglyLinkedListOperations.reverse(head));
     // Creating a loop for testing
     head.next.next.next.next.next = head.next.next;
 
-    //    //Detecting and removing loop 1st Approach
-    System.out.println(
-        DetectAndRemoveLoop1.detectAndRemoveLoop(head) == 1 ? "Loop detected and removed!" : "");
+    //  Detecting and removing loop 1st Approach
+    // System.out.println(
+    //    DetectAndRemoveLoop1.detectAndRemoveLoop(head) == 1 ? "Loop detected and removed!" : "");
     //    System.out.println(DetectAndRemoveLoop1.class+" after removing loop : ");
     //    PrintLinkedList.printList(head);
     //
@@ -27,10 +29,12 @@ public class DriverProgram {
     //    head.next.next.next.next.next = head.next.next;
     //
     //    //Detecting and removing loop 2nd Approach
-    //     i= DetectAndRemoveLoop2.detectAndRemoveLoop(head);
-    //    if(i==1){
-    //      System.out.println("Loop detected and removed!");
-    //    }
+
+    System.out.println(
+        DetectAndRemoveLoop2.detectAndRemoveLoop(head) == 1
+            ? "Loop detected and removed!"
+            : "Yo! No loop.");
+
     //    System.out.println(DetectAndRemoveLoop2.class+" after removing loop : ");
     //    PrintLinkedList.printList(head);
     //
@@ -56,12 +60,11 @@ public class DriverProgram {
     //    System.out.println("Inserting at the end : ");
     //    Node insertAtEnd = InsertIntoLinkedList.insetAtEnd(head, 820);
     //    PrintLinkedList.printList(insertAtEnd);
-    //    head=DeletingInLinkedList.deleteFirstNode(head);
-    //    System.out.println("After deleting 1st node : ");
-    //    PrintLinkedList.printList(head);
+    //        head = SinglyLinkedListOperations.deleteFirstNode(head);
+    //        System.out.println("After deleting 1st node : ");
+    //        SinglyLinkedListOperations.printList(head);
     //    head = SinglyLinkedListOperations.deleteFromPosition(head, 5);
     //    System.out.println("After from position node : ");
     //    SinglyLinkedListOperations.printList(head);
   }
 }
-
