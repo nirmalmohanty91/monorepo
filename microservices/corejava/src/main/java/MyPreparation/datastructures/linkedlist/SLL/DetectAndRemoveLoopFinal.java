@@ -1,31 +1,33 @@
 package MyPreparation.datastructures.linkedlist.SLL;
 
 public class DetectAndRemoveLoopFinal {
-  public static void detectAndRemoveLoop(Node node) {
-    Node slow = node;
-    Node fast = node;
-
-    if (node == null || node.next == null) {
-      System.out.println("List is empty/Have only one element in it.");
+  public static void detectAndRemoveLoop(Node head) {
+    Node slow = head;
+    Node fast = head;
+    /** List is empty OR Have only one element in it without a loop. */
+    if (head == null || head.next == null) {
       return;
     }
 
-    slow = node.next;
+    /** Checking if loop exists */
+    slow = head.next;
     fast = fast.next.next;
-
     while (fast != null && fast.next != null) {
-      if (slow == fast) break;
+      if (slow == fast) {
+        break;
+      }
       slow = slow.next;
       fast = fast.next.next;
     }
-    // If loop exists
+    /** Loop found. Removing... */
     if (fast == slow) {
-      System.out.println("Loop found. Removing...");
-      slow = node;
+      slow = head;
       while (slow.next != fast.next) {
         fast = fast.next;
         slow = slow.next;
       }
+      /** Printing the starting node of the loop */
+      System.out.println("Value in starting node of the loop: " + slow.next.data);
       fast.next = null;
     }
   }

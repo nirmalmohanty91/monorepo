@@ -17,7 +17,7 @@ public class DriverProgram {
     //    System.out.println("Reversing linked list");
     //    SinglyLinkedListOperations.printList(SinglyLinkedListOperations.reverse(head));
     // Creating a loop for testing
-    head.next.next.next.next.next = head.next.next;
+    head.next.next.next.next.next = head.next;
 
     //  Detecting and removing loop 1st Approach
     // System.out.println(
@@ -29,11 +29,13 @@ public class DriverProgram {
     //    head.next.next.next.next.next = head.next.next;
     //
     //    //Detecting and removing loop 2nd Approach
+//
+//    System.out.println(
+//        DetectAndRemoveLoop2.detectAndRemoveLoop(head) == 1
+//            ? "Loop detected and removed!"
+//            : "Yo! No loop.");
 
-    System.out.println(
-        DetectAndRemoveLoop2.detectAndRemoveLoop(head) == 1
-            ? "Loop detected and removed!"
-            : "Yo! No loop.");
+    DetectAndRemoveLoopFinal.detectAndRemoveLoop(head);
 
     //    System.out.println(DetectAndRemoveLoop2.class+" after removing loop : ");
     //    PrintLinkedList.printList(head);
