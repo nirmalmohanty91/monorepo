@@ -7,7 +7,8 @@ public class DriverClass {
 
     // int[] numbers = new int[] {12, 89, 1, 67, 5, 23};
     int[] numbers = {12, 89, 1, 67, 5, 23};
-    //for (int i : Sorting.mergeSort(numbers)) System.out.print(i + " ");
+    int[] numbers1 = {1,2,3};
+    //Sorting.insertionSort(numbers);
 
     // Quick Sort
     for (int i : Sorting.quickSort(numbers, 0, numbers.length - 1)) System.out.print(i + " ");

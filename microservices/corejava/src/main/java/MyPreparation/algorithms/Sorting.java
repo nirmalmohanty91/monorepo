@@ -1,5 +1,7 @@
 package MyPreparation.algorithms;
 
+import java.util.Arrays;
+
 public class Sorting {
 
   /**
@@ -15,20 +17,22 @@ public class Sorting {
           numbers[j] = temp;
         }
       }
+      Utility.printArray(numbers, i);
     }
     return numbers;
   }
+
   /** The time complexity of this algorithm is O(n2). This is average case example */
   public static int[] bubbleSort2(int[] numbers) {
 
-    for (int j = 0; j < numbers.length; j++) {
+    for (int i = 0; i < numbers.length; i++) {
       // Since the highest element will be placed at the end of array the 2nd loop can be limited
       // further
-      for (int i = 0; i < numbers.length - j - 1; i++) {
-        if (numbers[i] > numbers[i + 1]) {
-          int temp = numbers[i + 1];
-          numbers[i + 1] = numbers[i];
-          numbers[i] = temp;
+      for (int j = 0; j < numbers.length - i - 1; j++) {
+        if (numbers[j] > numbers[j + 1]) {
+          int temp = numbers[j + 1];
+          numbers[j + 1] = numbers[j];
+          numbers[j] = temp;
         }
       }
     }
@@ -37,16 +41,18 @@ public class Sorting {
 
   /** The time complexity of this algorithm is O(n). This is Best case example */
   public static int[] bubbleSort3(int[] numbers) {
-    for (int j = 0; j < numbers.length; j++) {
+    for (int i = 0; i < numbers.length; i++) {
       boolean isSorted = true;
-      for (int i = 0; i < numbers.length - j - 1; i++) {
-        if (numbers[i] > numbers[i + 1]) {
-          int temp = numbers[i + 1];
-          numbers[i + 1] = numbers[i];
-          numbers[i] = temp;
+      for (int j = 0; j < numbers.length - i - 1; j++) {
+        if (numbers[j] > numbers[j + 1]) {
+          int temp = numbers[j + 1];
+          numbers[j + 1] = numbers[j];
+          numbers[j] = temp;
           isSorted = false;
         }
       }
+      Utility.printArray(numbers, i);
+
       if (isSorted) {
         break;
       }
@@ -61,7 +67,7 @@ public class Sorting {
    * O(n2)
    */
   public static int[] insertionSort(int[] numbers) {
-    //Starting from index 1
+    // Starting from index 1
     for (int i = 1; i < numbers.length; i++) {
       int value = numbers[i];
       int markerIndex = i;
@@ -70,7 +76,9 @@ public class Sorting {
         numbers[markerIndex] = numbers[markerIndex - 1];
         markerIndex = markerIndex - 1;
       }
+
       numbers[markerIndex] = value;
+      Utility.printArray(numbers,i);
     }
     return numbers;
   }
