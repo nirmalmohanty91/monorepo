@@ -14,4 +14,9 @@ public class Utility {
     Arrays.stream(arr).forEach(a -> System.out.print(a + " "));
     System.out.println();
   }
+
+  public static void printArray(int[] arr) {
+    Arrays.stream(arr).forEach(a -> System.out.print(a + " "));
+    System.out.println();
+  }
 }
