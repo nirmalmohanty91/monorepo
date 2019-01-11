@@ -1,12 +1,17 @@
 package MyPreparation;
 
+import MyPreparation.Others.whyoverrideimplementations.B;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 
 import java.math.BigDecimal;
 import java.math.MathContext;
+import java.math.RoundingMode;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
+import java.util.stream.Collectors;
 
 @ControllerAdvice
 public class Test {
@@ -132,9 +137,30 @@ public class Test {
     //    BigDecimal n = new BigDecimal(100.893);
     //    System.out.println((n.floatValue()*100));
 
-    String s1 = null;
+    //    String s1 = null;
+    //    System.out.println("P".equalsIgnoreCase(s1));
 
-    System.out.println("P".equalsIgnoreCase(s1));
+    //    Integer i = 128;
+    //    Integer i1 = Integer.valueOf(128);
+    //
+    //    int i2 = 128;
+    //    int i3 = 128;
+    //
+    //    System.out.println(i.equals(i1));
+    //    System.out.println(i2 == i3);
+
+    BigDecimal value = new BigDecimal(.59);
+
+    //    System.out.println(value.multiply(new BigDecimal(100));
+    //    System.out.println(Float.toString(value.floatValue()*100));
+    System.out.println(value);
+    String paymentAmounts =
+        value.multiply(new BigDecimal(100).setScale(2, RoundingMode.DOWN)).toString();
+    //System.out.println(paymentAmounts);
+
+    //System.out.println("Original Value: " + value);
+
+    System.out.println(Float.toString(value.floatValue() * 100).split("\\.")[0]);
   }
 }
 
