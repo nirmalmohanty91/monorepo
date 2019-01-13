@@ -1,4 +1,4 @@
-package MyPreparation.collectionprograms;
+package MyPreparation.collectionprograms.SetPrograms;
 
 import java.util.Comparator;
 import java.util.Iterator;

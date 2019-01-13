@@ -1,4 +1,4 @@
-package MyPreparation.collectionprograms;
+package MyPreparation.Others;
 
 public class LinkedListDemo {
 

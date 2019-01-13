@@ -1,10 +1,15 @@
-package MyPreparation.collectionprograms.sortingudmap;
+package MyPreparation.collectionprograms.MapPrograms;
+
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.Setter;
+import lombok.ToString;
 
 import java.util.Comparator;
 import java.util.HashMap;
 import java.util.TreeMap;
 
-public class MainTest {
+public class SortingCustomMap {
   public static int a;
   public int b;
 
@@ -25,7 +30,7 @@ public class MainTest {
     Employee emp2 = new Employee("Clark", 245, 10);
     m.put(1, emp);
     m.put(2, emp1);
-    m.put(3,emp3);
+    m.put(3, emp3);
     m.put(4, emp2);
     System.out.println("Map before sorting: " + m);
     TreeMap<Integer, Employee> sortedMap = sortMapByValue(m);
@@ -52,5 +57,34 @@ public class MainTest {
      * }
      */
 
+  }
+}
+
+@Getter
+@Setter
+@AllArgsConstructor
+@ToString
+class Employee {
+
+  public String name;
+  public int id;
+  public int salary;
+}
+
+class ValueComparator implements Comparator<Integer> {
+
+  HashMap<Integer, Employee> map = new HashMap<>();
+
+  public ValueComparator(HashMap<Integer, Employee> map) {
+    this.map.putAll(map);
+  }
+
+  @Override
+  public int compare(Integer o1, Integer o2) {
+    if (map.get(o1).getSalary() >= map.get(o2).getSalary()) {
+      return -1;
+    } else {
+      return 1;
+    }
   }
 }

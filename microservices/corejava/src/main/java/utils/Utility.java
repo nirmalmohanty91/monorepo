@@ -1,5 +1,6 @@
 package utils;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 
 public class Utility {
@@ -16,6 +17,16 @@ public class Utility {
   }
 
   public static void printArray(int[] arr) {
+    Arrays.stream(arr).forEach(a -> System.out.print(a + " "));
+    System.out.println();
+  }
+
+  public static void printArray(Integer[] arr) {
+    Arrays.stream(arr).forEach(a -> System.out.print(a + " "));
+    System.out.println();
+  }
+
+  public static void printArray(Object[] arr) {
     Arrays.stream(arr).forEach(a -> System.out.print(a + " "));
     System.out.println();
   }

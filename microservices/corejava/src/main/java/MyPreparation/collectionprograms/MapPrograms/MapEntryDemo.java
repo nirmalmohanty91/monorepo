@@ -1,4 +1,4 @@
-package MyPreparation.collectionprograms;
+package MyPreparation.collectionprograms.MapPrograms;
 
 import java.util.HashMap;
 

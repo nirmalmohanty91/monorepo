@@ -1,4 +1,4 @@
-package MyPreparation.collectionprograms;
+package MyPreparation.collectionprograms.SetPrograms;
 
 import java.util.HashSet;
 import java.util.Set;

@@ -1,4 +1,4 @@
-package MyPreparation.collectionprograms;
+package MyPreparation.collectionprograms.ArrayListPrograms;
 
 import java.util.ArrayList;
 import java.util.Collections;
