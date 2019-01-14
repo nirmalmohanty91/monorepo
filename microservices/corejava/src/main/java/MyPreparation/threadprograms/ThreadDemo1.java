@@ -11,17 +11,17 @@ public class ThreadDemo1 {
             + Thread.currentThread().getPriority()
             + " Id: "
             + Thread.currentThread().getId());
-    Thread1 thread1 = new Thread1();
-    thread1.setName("Batman");
-    thread1.start();
+    MyThread1 myThread1 = new MyThread1();
+    myThread1.setName("Batman");
+    myThread1.start();
 
-    Thread2 thread2 = new Thread2();
+    MyThread2 thread2 = new MyThread2();
     thread2.setName("Superman");
     thread2.start();
   }
 }
 
-class Thread1 extends Thread {
+class MyThread1 extends Thread {
   public void run() {
     for (int i = 0; i <= 5; i++) {
       System.out.println(
@@ -42,7 +42,7 @@ class Thread1 extends Thread {
   }
 }
 
-class Thread2 extends Thread {
+class MyThread2 extends Thread {
   public void run() {
 
     for (int i = 0; i <= 5; i++) {
