@@ -1,6 +1,9 @@
-package MyPreparation.collectionprograms.ArrayListPrograms;
+package MyPreparation.collectionprograms.ListPrograms;
+
+import utils.Utility;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Iterator;
 import java.util.ListIterator;
 /** ArrayList is not synchronized. That means, multiple threads can use same ArrayList simultaneously.*/
@@ -18,7 +21,7 @@ public class ArrayListFunctions {
     listOfIntegers2.add(60);
     listOfIntegers2.add(70);
     System.out.println(listOfIntegers2);
-    /**
+
     ArrayList<String> listOfStrings = new ArrayList<>();
     listOfStrings.add("Nirmal");
     listOfStrings.add("Jason");
@@ -66,7 +69,7 @@ public class ArrayListFunctions {
 
     System.out.println("Index of an element: " + listOfIntegers1.indexOf(4));
     System.out.println("Last index of an element: " + listOfIntegers1.lastIndexOf(4));
-    */
+
     // Different ways to loop a list
     /** 1. Java 7 ways */
     System.out.println("Using traditional for loop:");
@@ -123,15 +126,17 @@ public class ArrayListFunctions {
       iterator1.remove();
     }
     System.out.println(listOfIntegers1);
-    /**
+
     System.out.println("Remove all the elements from list1 which are not present in list2:");
     listOfIntegers1.retainAll(listOfIntegers2);
     System.out.println(listOfIntegers1);
 
     System.out.println("Clearing list...");
     listOfIntegers1.clear();
-    // list.remove(10); //java.lang.IndexOutOfBoundsException: Index: 10,
-    // Size: 3
-    */
+
+    //adding array to a list
+    Integer[] intArray = {12,34,65};
+    listOfIntegers1.addAll(Arrays.asList(intArray));
+    System.out.println(listOfIntegers1);
   }
 }
