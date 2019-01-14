@@ -1,13 +1,9 @@
 package MyPreparation.collectionprograms.ArrayListPrograms;
 
-import utils.Utility;
-
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
 import java.util.Iterator;
 import java.util.ListIterator;
-
+/** ArrayList is not synchronized. That means, multiple threads can use same ArrayList simultaneously.*/
 public class ArrayListFunctions {
   public static void main(String[] args) {
     ArrayList<Integer> listOfIntegers1 = new ArrayList<>();

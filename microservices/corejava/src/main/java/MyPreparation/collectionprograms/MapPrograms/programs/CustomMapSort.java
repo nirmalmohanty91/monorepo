@@ -1,4 +1,4 @@
-package MyPreparation.collectionprograms.MapPrograms;
+package MyPreparation.collectionprograms.MapPrograms.programs;
 
 import models.Employee;
 
