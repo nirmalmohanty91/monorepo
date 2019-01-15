@@ -1,4 +1,4 @@
-package MyPreparation.threadprograms;
+package MyPreparation.threadprograms.programs;
 
 import java.util.stream.IntStream;
 

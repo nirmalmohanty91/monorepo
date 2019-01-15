@@ -1,4 +1,4 @@
-package MyPreparation.threadprograms;
+package MyPreparation.threadprograms.programs;
 
 // Two threads accessing two methods in parallel
 public class ThreadDemo1 {
