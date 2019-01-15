@@ -18,4 +18,11 @@ public class ChildInDifferentPackage extends ProtectedConstParent {
     // Because, we can’t instantiate a class outside the package which has only protected constructors.
     // ProtectedConstParent p = new ProtectedConstParent("Child in different package.");
   }
+//Cannot override default methods in different package
+  /**
+  @Override
+  void getFortune(){
+    System.out.println("Hi");
+  }
+  */
 }

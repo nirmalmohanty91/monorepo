@@ -19,5 +19,9 @@ public class ProtectedConstParent {
   protected String name() {
     return "Protected method of Parent";
   }
+
+   void getFortune(){
+    System.out.println("hello");
+  }
 }
 

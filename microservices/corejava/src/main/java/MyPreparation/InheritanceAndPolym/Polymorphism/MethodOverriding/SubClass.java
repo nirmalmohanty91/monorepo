@@ -25,4 +25,9 @@ public class SubClass extends SuperClass {
     System.out.println(i);
   }
   */
+
+  @Override
+  void getFortune(){
+    System.out.println("Hi");
+  }
 }

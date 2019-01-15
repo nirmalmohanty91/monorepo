@@ -12,4 +12,8 @@ public class SuperClass {
   public void getNumber(Integer i){
     System.out.println(i);
   }
+
+  void getFortune(){
+    System.out.println("hello");
+  }
 }
