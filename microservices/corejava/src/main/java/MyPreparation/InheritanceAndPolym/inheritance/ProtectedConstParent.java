@@ -13,7 +13,7 @@ public class ProtectedConstParent {
    */
   protected ProtectedConstParent(String name) {
     this.name = name;
-    System.out.println("Call to parent constructor from "+this.name);
+    System.out.println("Call from: "+this.name);
   }
 
   protected String name() {

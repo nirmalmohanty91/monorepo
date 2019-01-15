@@ -1,6 +1,5 @@
 package MyPreparation.InheritanceAndPolym;
 
-import MyPreparation.InheritanceAndPolym.Polymorphism.MethodOverloading;
 import MyPreparation.InheritanceAndPolym.Polymorphism.MethodOverriding.SubClass;
 import MyPreparation.InheritanceAndPolym.Polymorphism.MethodOverriding.SuperClass;
 import MyPreparation.InheritanceAndPolym.inheritance.ChildInSamePackage;
