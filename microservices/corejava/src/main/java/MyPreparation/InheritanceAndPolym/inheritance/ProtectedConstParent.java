@@ -2,12 +2,18 @@ package MyPreparation.InheritanceAndPolym.inheritance;
 
 public class ProtectedConstParent {
   protected int i = 98;
+  private String name;
+  protected ProtectedConstParent(){
+    System.out.println("Default Parent constructor");
+  }
+
   /**
    * child class in different package won't be able to access the constructor of parent if marked
    * protected
    */
-  protected ProtectedConstParent() {
-    System.out.println("Parent constructor");
+  protected ProtectedConstParent(String name) {
+    this.name = name;
+    System.out.println("Call to parent constructor from "+this.name);
   }
 
   protected String name() {
@@ -15,10 +21,3 @@ public class ProtectedConstParent {
   }
 }
 
-class Child extends ProtectedConstParent {
-
-  void methodsOfParent() {
-    System.out.println(i);
-    new ProtectedConstParent().name();
-  }
-}
