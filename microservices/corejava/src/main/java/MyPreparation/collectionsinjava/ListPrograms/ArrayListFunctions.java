@@ -138,5 +138,15 @@ public class ArrayListFunctions {
     Integer[] intArray = {12,34,65};
     listOfIntegers1.addAll(Arrays.asList(intArray));
     System.out.println(listOfIntegers1);
+    /** 1. Java 8 ways of looping */
+    // looping happens in order
+    listOfIntegers1.forEach(x -> System.out.print(x+" "));
+    System.out.println();
+    // Guarantee ordering of processing streams elements
+    listOfIntegers1.stream().forEachOrdered(x -> System.out.print(x+" "));
+    System.out.println();
+    // looping happens randomly
+    listOfIntegers1.stream().forEach(x -> System.out.print(x+" "));
+
   }
 }
