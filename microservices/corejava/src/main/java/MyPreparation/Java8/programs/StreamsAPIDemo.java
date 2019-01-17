@@ -2,6 +2,9 @@ package MyPreparation.Java8.programs;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
+import java.util.Set;
+import java.util.TreeSet;
 import java.util.stream.Stream;
 
 public class StreamsAPIDemo {
@@ -48,5 +51,23 @@ public class StreamsAPIDemo {
     Stream<String> stream2 =
         list.stream().filter(element -> element.contains("d") || element.contains("D"));
     stream2.forEach(x -> System.out.print(x + " "));
+
+    System.out.println("Encounter Order of Collection sources:");
+    /**
+     * The elements in TreeSet are sorted according to specified Comparator. If no Comparator is
+     * specified, elements will be placed according to their natural ascending order.
+     */
+    List<String> list2 = Arrays.asList("B", "A", "C", "D", "F");
+    Set<String> set = new TreeSet<>(list2);
+    System.out.println(list2);
+    System.out.println(set);
+
+    Object[] listOutput = list2.stream().toArray();
+    Object[] setOutput = set.stream().toArray();
+
+    Arrays.stream(listOutput).forEach(x -> System.out.print(x + " "));
+    System.out.println();
+    Arrays.stream(setOutput).forEach(x -> System.out.print(x + " "));
+    System.out.println();
   }
 }

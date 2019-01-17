@@ -4,7 +4,8 @@ public class FrontBackSum {
 
   public static void main(String[] args) {
      //int[] arr = {3, 6, 1,12,80,9,102};
-    int[] arr = {80, 67, 1, 2, 5,72};
+    //int[] arr = {80, 67, 1, 2, 5,72};
+    int[] arr = {1,2,3,7,6};
     int frontSum = 0;
     int backSum = 0;
     int finalPointer = 0;
