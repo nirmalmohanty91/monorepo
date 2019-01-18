@@ -1,4 +1,4 @@
-package MyPreparation.programs.stringprograms;
+package interviewquestions.Oracle;
 
 public class ConvertStringToInteger {
   public static void main(String[] args) {
@@ -10,6 +10,8 @@ public class ConvertStringToInteger {
     System.out.println("Getting the exact value: " + c1);
     int a1 = Integer.parseInt(String.valueOf('5'));
     System.out.println("Another way to do it: "+a1);
+    // If you assign character to int directly the int variable will be assigned with the ASCII value of that character
+    // (int) type casting is optional here
     int asciValueOf5 = (int) '5';
     int asciValueOf0 = (int) '0';
     System.out.println("ASCII value of 5: " + asciValueOf5);

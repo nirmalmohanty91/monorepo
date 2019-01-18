@@ -1,4 +1,4 @@
-package MyPreparation.programs.stringprograms;
+package MyPreparation.fileprograms;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
@@ -10,7 +10,7 @@ public class CountWordsLineCharacters {
 		String line = null;
 		int numberOfLines = 0;
 		int numberOfWords = 0;
-		int numberofCharacters = 0;
+		int numberOfCharacters = 0;
 		System.out.println("======File Content=========");
 		while ((line = br.readLine()) != null) {
 			numberOfLines++;
@@ -18,14 +18,14 @@ public class CountWordsLineCharacters {
 			String[] words = line.replaceAll("\\s", " ").split(" ");
 			numberOfWords += words.length;
 			for (String s : words) {
-				numberofCharacters += s.length();
+				numberOfCharacters += s.length();
 			}
 
 		}
 		System.out.println("======Details of file========");
 		fileOperation("Number of lines: " + numberOfLines);
 		fileOperation("Number of words: " + numberOfWords);
-		fileOperation("Number of characters: " + numberofCharacters);
+		fileOperation("Number of characters: " + numberOfCharacters);
 	}
 
 	public static void fileOperation(String s) {
