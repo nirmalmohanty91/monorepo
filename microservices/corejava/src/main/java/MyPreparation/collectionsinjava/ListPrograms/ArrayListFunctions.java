@@ -142,7 +142,7 @@ public class ArrayListFunctions {
     // looping happens in order
     listOfIntegers1.forEach(x -> System.out.print(x+" "));
     System.out.println();
-    // Guarantee ordering of processing streams elements
+    // Guarantee ordering of selectProductAndInsertMoney streams elements
     listOfIntegers1.stream().forEachOrdered(x -> System.out.print(x+" "));
     System.out.println();
     // looping happens randomly
