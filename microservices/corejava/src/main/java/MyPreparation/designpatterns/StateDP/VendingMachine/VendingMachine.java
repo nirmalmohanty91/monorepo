@@ -1,5 +1,6 @@
 package MyPreparation.designpatterns.StateDP.VendingMachine;
 
+/** Context */
 public class VendingMachine implements VendingMachineState {
 
   VendingMachineState vendingMachineState;
@@ -15,7 +16,7 @@ public class VendingMachine implements VendingMachineState {
 
   @Override
   public void selectProductAndInsertMoney(String product, double money) {
-    vendingMachineState.selectProductAndInsertMoney(product,money);
+    vendingMachineState.selectProductAndInsertMoney(product, money);
     if (vendingMachineState instanceof NoMoneyState) {
       HasMoneySate hasMoneySate = new HasMoneySate();
       setVendingMachineState(hasMoneySate);
@@ -29,6 +30,5 @@ public class VendingMachine implements VendingMachineState {
       NoMoneyState noMoneyState = new NoMoneyState();
       setVendingMachineState(noMoneyState);
     }
-
   }
 }

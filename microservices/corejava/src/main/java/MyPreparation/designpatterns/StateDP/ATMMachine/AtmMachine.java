@@ -1,5 +1,5 @@
 package MyPreparation.designpatterns.StateDP.ATMMachine;
-
+/** This is called context */
 public class AtmMachine implements AtmMachineState {
 
   private AtmMachineState atmMachineState;
