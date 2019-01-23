@@ -1,4 +1,4 @@
-package MyPreparation.InheritanceAndPolym.Polymorphism;
+package MyPreparation.InheritanceAndPolym.Polymorphism.MethodOverloading;
 /** 1. MethodOverloading is also know as Static-Polymorphism/static binding/Early Binding
  *  2. Compiler checks method signature for duplicate methods for method overloading.
  *     method signature consist of three things, 1) Method Name   2) Number Of Arguments   3) Types of arguments.

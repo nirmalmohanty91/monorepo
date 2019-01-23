@@ -32,29 +32,31 @@ public class REGEXPattern {
     Utility.printArray(s4);
 
     String sentence4 = "Nirmal1Batman2Spiderman3Venom";
-    System.out.println("Printing all the numbers in a string using regex: "+sentence4.replaceAll("\\D", ""));
-    System.out.println("Another way: "+sentence4.replaceAll("[^0-9]+", ""));
-    System.out.println("Remove all the numbers from string: "+ sentence4.replaceAll("[^a-zA-Z]+", ""));
-    //Check if string contains only numbers
+    System.out.println(
+        "Printing all the numbers in a string using regex: " + sentence4.replaceAll("\\D", ""));
+    System.out.println("Another way: " + sentence4.replaceAll("[^0-9]+", ""));
+    System.out.println(
+        "Remove all the numbers from string: " + sentence4.replaceAll("[^a-zA-Z]+", ""));
+    // Check if string contains only numbers
     String numbers = "123456";
     String regex = "[0-9]+";
-    System.out.println("Check if the string has only numbers: "+numbers.matches(regex));
-    //Check if string contains only alphabets
+    System.out.println("Check if the string has only numbers: " + numbers.matches(regex));
+    // Check if string contains only alphabets
     String numbers1 = "abcAZ";
     String regex1 = "[a-zA-Z]+";
-    System.out.println("Check if the string has only alphabets: "+numbers1.matches(regex1));
-    //Check if the String has special characters
+    System.out.println("Check if the string has only alphabets: " + numbers1.matches(regex1));
+    // Check if the String has special characters
     String special = "1234444@hgsd!~";
-    String regex3 = "[a-zA-Z_0-9]";// same as \\w
-    System.out.println("Type all non-word chars in a string: "+special.replaceAll("\\w",""));
-    System.out.println("Type all word chars in a string: "+special.replaceAll("[^\\w]",""));
-    System.out.println("Type all word chars in a string: "+special.replaceAll("\\W",""));
-    //Check if string has special chars
-    //Pattern p = Pattern.compile("[^A-Za-z0-9]");
+    String regex3 = "[a-zA-Z_0-9]"; // same as \\w
+    System.out.println("Type all non-word chars in a string: " + special.replaceAll("\\w", ""));
+    System.out.println("Type all word chars in a string: " + special.replaceAll("[^\\w]", ""));
+    System.out.println("Type all word chars in a string: " + special.replaceAll("\\W", ""));
+    // Check if string has special chars
+    // Pattern p = Pattern.compile("[^A-Za-z0-9]");
     Pattern p = Pattern.compile("\\W");
     Matcher m = p.matcher(numbers);
-    System.out.println("Checking if any non-word char is present: "+m.find());
-    System.out.println("In one line: "+Pattern.compile("\\W").matcher(special ).find());
-
+    System.out.println("Checking if any non-word char is present: " + m.find());
+    System.out.println(
+        "Is any special character Present: " + Pattern.compile("\\W").matcher(special).find());
   }
 }

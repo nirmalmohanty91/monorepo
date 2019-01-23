@@ -2,13 +2,10 @@ package MyPreparation.zExperimentPackage;
 
 import org.springframework.web.bind.annotation.ControllerAdvice;
 
-import java.math.BigDecimal;
-import java.math.RoundingMode;
 import java.util.ArrayList;
 
 @ControllerAdvice
 public class Test {
-
   public static void main(String[] args) {
 
     //    Optional<String> gender = Optional.of("MALE");
@@ -142,18 +139,19 @@ public class Test {
     //    System.out.println(i.equals(i1));
     //    System.out.println(i2 == i3);
 
-    BigDecimal value = new BigDecimal(.59);
+//    BigDecimal value = new BigDecimal(.59);
+//
+//    //    System.out.println(value.multiply(new BigDecimal(100));
+//    //    System.out.println(Float.toString(value.floatValue()*100));
+//    System.out.println(value);
+//    String paymentAmounts =
+//        value.multiply(new BigDecimal(100).setScale(2, RoundingMode.DOWN)).toString();
+//    // System.out.println(paymentAmounts);
+//
+//    // System.out.println("Original Value: " + value);
+//
+//    System.out.println(Float.toString(value.floatValue() * 100).split("\\.")[0]);
 
-    //    System.out.println(value.multiply(new BigDecimal(100));
-    //    System.out.println(Float.toString(value.floatValue()*100));
-    System.out.println(value);
-    String paymentAmounts =
-        value.multiply(new BigDecimal(100).setScale(2, RoundingMode.DOWN)).toString();
-    //System.out.println(paymentAmounts);
-
-    //System.out.println("Original Value: " + value);
-
-    System.out.println(Float.toString(value.floatValue() * 100).split("\\.")[0]);
   }
 }
 
