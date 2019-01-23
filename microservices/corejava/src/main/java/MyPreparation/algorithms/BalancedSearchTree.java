@@ -1,6 +1,6 @@
 package MyPreparation.algorithms;
 
-public class BinarySearchTree {
+public class BalancedSearchTree {
 
   public static void main(String[] args) {
     BST bstOperations = new BST();

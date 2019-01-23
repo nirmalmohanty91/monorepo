@@ -8,6 +8,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.Comparator;
+import java.util.HashMap;
 import java.util.List;
 import java.util.function.Predicate;
 import java.util.stream.IntStream;
@@ -171,6 +172,7 @@ public class Test {
 
     nirmalList.sort(Comparator.comparing(x -> x.name));
     System.out.println(nirmalList);
+    HashMap<Integer,Integer> map= new HashMap<>();
   }
 }
 
