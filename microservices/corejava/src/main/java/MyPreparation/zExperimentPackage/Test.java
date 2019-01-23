@@ -1,8 +1,16 @@
 package MyPreparation.zExperimentPackage;
 
+import lombok.Builder;
+import lombok.ToString;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.List;
+import java.util.function.Predicate;
+import java.util.stream.IntStream;
 
 @ControllerAdvice
 public class Test {
@@ -52,11 +60,11 @@ public class Test {
     /** ########################## */
     ArrayList<Integer> arrayList = new ArrayList<>();
     arrayList.add(1);
-    arrayList.add(4);
-    arrayList.add(4);
+    arrayList.add(2);
+    arrayList.add(3);
     arrayList.add(4);
     arrayList.add(5);
-    arrayList.add(3);
+    arrayList.add(6);
 
     //
     //    System.out.println(Test.birthday(arrayList, 3, 2));
@@ -139,19 +147,36 @@ public class Test {
     //    System.out.println(i.equals(i1));
     //    System.out.println(i2 == i3);
 
-//    BigDecimal value = new BigDecimal(.59);
-//
-//    //    System.out.println(value.multiply(new BigDecimal(100));
-//    //    System.out.println(Float.toString(value.floatValue()*100));
-//    System.out.println(value);
-//    String paymentAmounts =
-//        value.multiply(new BigDecimal(100).setScale(2, RoundingMode.DOWN)).toString();
-//    // System.out.println(paymentAmounts);
-//
-//    // System.out.println("Original Value: " + value);
-//
-//    System.out.println(Float.toString(value.floatValue() * 100).split("\\.")[0]);
+    //    BigDecimal value = new BigDecimal(.59);
+    //
+    //    //    System.out.println(value.multiply(new BigDecimal(100));
+    //    //    System.out.println(Float.toString(value.floatValue()*100));
+    //    System.out.println(value);
+    //    String paymentAmounts =
+    //        value.multiply(new BigDecimal(100).setScale(2, RoundingMode.DOWN)).toString();
+    //    // System.out.println(paymentAmounts);
+    //
+    //    // System.out.println("Original Value: " + value);
+    //
+    //    System.out.println(Float.toString(value.floatValue() * 100).split("\\.")[0]);
 
+    List<Nirmal> nirmalList = new ArrayList<>();
+
+    nirmalList.add(Nirmal.builder().id(112).name("Batman").build());
+    nirmalList.add(Nirmal.builder().id(2).name("hello").build());
+    nirmalList.add(Nirmal.builder().id(92).name("Bello").build());
+    nirmalList.add(Nirmal.builder().id(20).name("kello").build());
+    nirmalList.add(Nirmal.builder().id(52).name("sello").build());
+    nirmalList.add(Nirmal.builder().id(23).name("you").build());
+
+    nirmalList.sort(Comparator.comparing(x -> x.name));
+    System.out.println(nirmalList);
   }
 }
 
+@Builder
+@ToString
+class Nirmal {
+  int id;
+  String name;
+}

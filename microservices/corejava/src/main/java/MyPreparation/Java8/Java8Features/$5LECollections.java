@@ -30,7 +30,6 @@ public class $5LECollections {
     numbers.add(30);
     numbers.add(5);
     numbers.add(11);
-
     // Java 7 way
     /*
     Collections.sort(numbers, new MyComparator());
@@ -47,14 +46,15 @@ public class $5LECollections {
     numbers.sort(Comparator.naturalOrder());
     */
     // Another way to sort. Awesome :)
-    Comparator<Integer> myComparator = Comparator.comparingInt(Integer::intValue);
-    Collections.sort(numbers, myComparator);
+   // Comparator<Integer> myComparator = Comparator.comparingInt(Integer::intValue);
+    Comparator<Integer> myComparator = Comparator.comparingInt(x->x.intValue());
 
     System.out.println(numbers);
 
     numbers.stream().forEach(System.out::println);
 
     List<Integer> evenList = numbers.stream().filter(i -> i % 2 == 0).collect(Collectors.toList());
+
 
     System.out.println(evenList);
   }

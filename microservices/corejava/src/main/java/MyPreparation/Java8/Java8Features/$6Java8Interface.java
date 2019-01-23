@@ -14,13 +14,20 @@ interface Parent2 {
   }
 }
 
-class Child implements Parent1, Parent2 {
+interface Parent3 extends Parent1 {
+
+  default void hello() {
+    System.out.println("Overriden in interface");
+  }
+}
+
+class Child implements Parent1, Parent2, Parent3 {
   // overriding to avoid multiple inheritance problem
   public void hello() {
     // System.out.println("Overriding default implementation.");
     // If you want to use any of the interface methods use below syntax
-    //Parent1.super.hello();
-    Parent2.super.hello();
+    // Parent1.super.hello();
+    Parent3.super.hello();
   }
 }
 
