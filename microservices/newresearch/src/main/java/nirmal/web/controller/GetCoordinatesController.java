@@ -1,6 +1,6 @@
-package nirmal.controller;
+package nirmal.web.controller;
 
-import nirmal.service.OpenStreetMapUtils;
+import nirmal.web.service.OpenStreetMapUtils;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;

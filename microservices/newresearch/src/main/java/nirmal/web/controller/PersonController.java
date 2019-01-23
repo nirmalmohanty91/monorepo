@@ -1,8 +1,8 @@
-package nirmal.controller;
+package nirmal.web.controller;
 
 import nirmal.domain.Person;
 import nirmal.domain.SwaggerUIDetails;
-import nirmal.service.PersonInterface;
+import nirmal.web.service.PersonInterface;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.GetMapping;

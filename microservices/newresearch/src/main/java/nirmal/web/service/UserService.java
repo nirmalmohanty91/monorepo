@@ -1,6 +1,8 @@
-package nirmal.service;
+package nirmal.web.service;
 
 import nirmal.domain.User;
+import nirmal.exception.ValidationException;
+import nirmal.exception.WarningException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -75,5 +77,14 @@ public class UserService {
 
     }
     return list;
+  }
+
+  public void getError() {
+
+    if (1 == 2) {
+      throw new WarningException("Warning");
+    } else {
+      throw new ValidationException("Validation");
+    }
   }
 }

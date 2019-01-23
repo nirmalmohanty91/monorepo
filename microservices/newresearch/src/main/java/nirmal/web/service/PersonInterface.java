@@ -1,4 +1,4 @@
-package nirmal.service;
+package nirmal.web.service;
 
 import nirmal.domain.Person;
 

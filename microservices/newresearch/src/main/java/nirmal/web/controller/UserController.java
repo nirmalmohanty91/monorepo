@@ -1,7 +1,7 @@
-package nirmal.controller;
+package nirmal.web.controller;
 
 import nirmal.domain.User;
-import nirmal.service.UserService;
+import nirmal.web.service.UserService;
 import org.apache.commons.lang.RandomStringUtils;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -59,5 +59,10 @@ public class UserController {
     }
 
     return null;
+  }
+
+  @GetMapping(path = "/testingException")
+  public void getError() {
+    userService.getError();
   }
 }

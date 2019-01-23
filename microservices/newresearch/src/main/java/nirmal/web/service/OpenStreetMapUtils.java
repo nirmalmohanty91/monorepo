@@ -1,4 +1,4 @@
-package nirmal.service;
+package nirmal.web.service;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;

@@ -1,4 +1,4 @@
-package nirmal.service;
+package nirmal.web.service;
 
 import java.util.ArrayList;
 import java.util.Arrays;

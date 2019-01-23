@@ -26,7 +26,7 @@ public class SwaggerConfiguration {
     return new Docket(DocumentationType.SWAGGER_2)
         .apiInfo(
             new ApiInfoBuilder().title(title).version(version).description(description).build())
-        .select().apis(RequestHandlerSelectors.basePackage("com.nirmal.controller"))
+        .select().apis(RequestHandlerSelectors.basePackage("com.nirmal.web.service.controller"))
         .paths(PathSelectors.any()).build()
         .directModelSubstitute(LocalDateTime.class, java.util.Date.class);
   }

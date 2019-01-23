@@ -1,6 +1,6 @@
-package nirmal.controller;
+package nirmal.web.controller;
 
-import nirmal.service.FileReadAndWriteService;
+import nirmal.web.service.FileReadAndWriteService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;

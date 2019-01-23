@@ -1,4 +1,4 @@
-package nirmal.controller;
+package nirmal.web.controller;
 
 import nirmal.cache.UsersCache;
 import nirmal.domain.Users;
@@ -18,7 +18,7 @@ public class UsersResouce {
     public Users getUser(@PathVariable final String name) {
         return usersCache.getUser(name);
     }
-    
-    
-    
+
+
+
 }
