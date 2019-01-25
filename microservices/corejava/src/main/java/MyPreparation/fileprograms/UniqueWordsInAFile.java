@@ -8,9 +8,14 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Scanner;
+import java.util.stream.Collectors;
+
 /**
  * There is no need to use BufferedReader or Scanner any more, you can either use
  * Files.readAllLines() if the file is small and you are not concerned about loading all lines in
@@ -35,7 +40,28 @@ public class UniqueWordsInAFile {
     // UniqueWordsInAFile.bufferedReaderExample(actualFileName);
     // UniqueWordsInAFile.scannerExample(actualFileName);
     // UniqueWordsInAFile.readFileInJava8(actualFileName);
-    UniqueWordsInAFile.uniqueWordsInFile(actualFileName);
+    // UniqueWordsInAFile.uniqueWordsInFile(actualFileName);
+    UniqueWordsInAFile.howManyTimesWordRepeated(actualFileName, "My");
+  }
+
+  public static void howManyTimesWordRepeated(String fileName, String word) throws IOException {
+
+    int i =
+        Files.lines(Paths.get(fileName))
+            .map(l -> l.trim())
+            .filter(l -> !l.isEmpty())
+            .map(
+                x -> {
+                  List<String> list = Arrays.asList(x.split(" "));
+                  return Collections.frequency(list, word);
+                })
+            .reduce((a, b) -> a + b)
+            .get();
+    // Reading file to a list
+    List<String> result = Files.readAllLines(Paths.get(fileName));
+    System.out.println(result);
+
+    System.out.println(word + " is repeated for " + i + " times.");
   }
 
   public static void uniqueWordsInFile(String fileName) throws IOException {

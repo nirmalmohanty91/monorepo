@@ -2,6 +2,7 @@ package MyPreparation.zExperimentPackage;
 
 import lombok.Builder;
 import lombok.ToString;
+import models.Employee;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 
 import java.util.ArrayList;
@@ -10,6 +11,8 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.HashMap;
 import java.util.List;
+import java.util.TreeMap;
+import java.util.TreeSet;
 import java.util.function.Predicate;
 import java.util.stream.IntStream;
 
@@ -170,15 +173,26 @@ public class Test {
     nirmalList.add(Nirmal.builder().id(52).name("sello").build());
     nirmalList.add(Nirmal.builder().id(23).name("you").build());
 
-    nirmalList.sort(Comparator.comparing(x -> x.name));
-    System.out.println(nirmalList);
-    HashMap<Integer,Integer> map= new HashMap<>();
+//    nirmalList.sort(Comparator.comparing(x -> x.name));
+//    System.out.println(nirmalList);
+    TreeMap<Nirmal,Integer> map= new TreeMap<>();
+    map.put(Nirmal.builder().id(112).name("Batman").build(),1);
+    map.put(Nirmal.builder().id(112).name("Atman").build(),1);
+    System.out.println(map);
+
+    TreeSet<Nirmal> set = new TreeSet<>();
+    set.add(Nirmal.builder().id(112).name("Batman").build());
   }
 }
 
 @Builder
 @ToString
-class Nirmal {
+class Nirmal{
   int id;
   String name;
+
+//  @Override
+//  public int compareTo(Nirmal o) {
+//    return this.name.compareTo(o.name);
+//  }
 }

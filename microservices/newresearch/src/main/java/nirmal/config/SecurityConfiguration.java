@@ -10,7 +10,6 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 @EnableWebSecurity
 public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 
-
   private static final String[] HTTP_WHITELIST = {"/health"};
   private static final String[] HTTP_ACTUATOR_LIST = {"/research/yml"};
 
@@ -23,9 +22,15 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
   @Override
   public void configure(HttpSecurity httpSecurity) throws Exception {
     httpSecurity.authorizeRequests().antMatchers(HTTP_WHITELIST).permitAll();
-    httpSecurity.authorizeRequests().antMatchers(HTTP_ACTUATOR_LIST).hasRole("ADMIN").and()
-        .httpBasic().and().csrf().disable();
 
+    httpSecurity
+        .authorizeRequests()
+        .antMatchers(HTTP_ACTUATOR_LIST)
+        .hasRole("ADMIN")
+        .and()
+        .httpBasic()
+        .and()
+        .csrf()
+        .disable();
   }
-
 }

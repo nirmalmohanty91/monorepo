@@ -5,7 +5,11 @@ import utils.Utility;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Iterator;
+import java.util.List;
 import java.util.ListIterator;
+import java.util.stream.Collectors;
+import java.util.stream.IntStream;
+
 /** ArrayList is not synchronized. That means, multiple threads can use same ArrayList simultaneously.*/
 public class ArrayListFunctions {
   public static void main(String[] args) {
@@ -139,14 +143,7 @@ public class ArrayListFunctions {
     listOfIntegers1.addAll(Arrays.asList(intArray));
     System.out.println(listOfIntegers1);
     /** 1. Java 8 ways of looping */
-    // looping happens in order
-    listOfIntegers1.forEach(x -> System.out.print(x+" "));
-    System.out.println();
-    // Guarantee ordering of selectProductAndInsertMoney streams elements
-    listOfIntegers1.stream().forEachOrdered(x -> System.out.print(x+" "));
-    System.out.println();
-    // looping happens randomly
-    listOfIntegers1.stream().forEach(x -> System.out.print(x+" "));
+
 
   }
 }

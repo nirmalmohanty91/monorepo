@@ -14,7 +14,7 @@ public class IOIntensiveOperation {
 
     // Submit the tasks for execution
     for (int i = 0; i < 100; i++) {
-      service.execute(new IntensiveTask());
+      service.execute(new IoOperation());
     }
     service.shutdown();
   }
