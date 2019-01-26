@@ -1,7 +1,6 @@
 package nirmal.loader;
 
-import nirmal.domain.Users;
-import org.springframework.beans.factory.annotation.Autowired;
+import nirmal.domain.models.Users;
 import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;

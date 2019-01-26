@@ -1,4 +1,4 @@
-package nirmal.domain;
+package nirmal.domain.ui;
 
 import lombok.Builder;
 import lombok.Getter;

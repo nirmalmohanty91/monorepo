@@ -1,4 +1,4 @@
-package nirmal.domain;
+package nirmal.domain.ui;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;

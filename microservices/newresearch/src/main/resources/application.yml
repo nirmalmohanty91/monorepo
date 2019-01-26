@@ -4,11 +4,26 @@ spring:
     - local
 ---
 env: local
+
 spring:
   profiles: local
-  h2:
-    console:
-      enabled: true
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5433/sample_db
+    username:
+    password:
+  jpa:
+    hibernate:
+      ddl-auto: update
+      generate-ddl: true
+      show-sql: true
+    properties:
+      hibernate:
+        temp:
+          use_jdbc_metadata_defaults: false
+    database-platform: org.hibernate.dialect.PostgreSQL9Dialect
+
+
 details:
     title: Research
     description: I'm a dog chasing cars. I wouldn't know what to do with one if I caught it! I just do things.

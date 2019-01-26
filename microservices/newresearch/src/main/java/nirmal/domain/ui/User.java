@@ -1,4 +1,4 @@
-package nirmal.domain;
+package nirmal.domain.ui;
 
 import org.springframework.stereotype.Component;
 import lombok.Data;

@@ -20,7 +20,6 @@
 	</properties>
 
 	<modules>
-		<module>MyResearch</module>
         <module>corejava</module>
         <module>newresearch</module>
     </modules>

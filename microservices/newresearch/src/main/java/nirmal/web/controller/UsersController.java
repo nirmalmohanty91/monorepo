@@ -1,6 +1,6 @@
-package nirmal.web.controller.springjpa;
+package nirmal.web.controller;
 
-import nirmal.domain.Users;
+import nirmal.domain.models.Users;
 import nirmal.repository.UserJpaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
+import java.util.Optional;
 
 @RestController
 @RequestMapping("/users")
@@ -23,8 +24,13 @@ public class UsersController {
   }
 
   @GetMapping(path = "/{id}")
-  public Users findByName(@PathVariable int id) {
-    return userJpaRepository.findById(id);
+  public Users findByName(@PathVariable Long id) {
+    Optional<Users> optional = userJpaRepository.findById(id);
+    if (optional.isPresent()) {
+      return optional.get();
+    } else {
+      return null;
+    }
   }
 
   /**
@@ -36,6 +42,11 @@ public class UsersController {
   @PostMapping(path = "/load")
   public Users load(@RequestBody Users users) {
     userJpaRepository.save(users);
-    return userJpaRepository.findById(users.getId());
+    Optional<Users> optional = userJpaRepository.findById(users.getId());
+    if (optional.isPresent()) {
+      return optional.get();
+    } else {
+      return null;
+    }
   }
 }

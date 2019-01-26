@@ -1,10 +1,8 @@
 package nirmal.repository;
 
-import nirmal.domain.models.Users;
+import nirmal.domain.models.Customer;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface UserJpaRepository extends JpaRepository<Users, Long> {
-//  Users findById(int id);
-}
+public interface CustomerJpaRepository extends JpaRepository<Customer, Long> {}

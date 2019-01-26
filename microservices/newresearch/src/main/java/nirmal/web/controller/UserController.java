@@ -1,8 +1,8 @@
 package nirmal.web.controller;
 
 import nirmal.domain.Person;
-import nirmal.domain.SwaggerUIDetails;
-import nirmal.domain.User;
+import nirmal.domain.ui.SwaggerUIDetails;
+import nirmal.domain.ui.User;
 import nirmal.web.service.PersonInterface;
 import nirmal.web.service.UserService;
 import org.apache.commons.lang.RandomStringUtils;

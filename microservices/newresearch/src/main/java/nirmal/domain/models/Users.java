@@ -1,4 +1,4 @@
-package nirmal.domain;
+package nirmal.domain.models;
 
 import java.io.Serializable;
 
@@ -30,7 +30,7 @@ import lombok.RequiredArgsConstructor;
 public class Users implements Serializable {
     @Id
     @GeneratedValue
-    private int id;
+    private Long id;
     private String name;
     private String teamName;
     private Long salary;

@@ -1,6 +1,6 @@
 package nirmal.web.service;
 
-import nirmal.domain.User;
+import nirmal.domain.ui.User;
 import nirmal.exception.ValidationException;
 import nirmal.exception.WarningException;
 import org.springframework.beans.factory.annotation.Autowired;
