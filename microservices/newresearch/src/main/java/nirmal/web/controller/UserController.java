@@ -1,6 +1,9 @@
 package nirmal.web.controller;
 
+import nirmal.domain.Person;
+import nirmal.domain.SwaggerUIDetails;
 import nirmal.domain.User;
+import nirmal.web.service.PersonInterface;
 import nirmal.web.service.UserService;
 import org.apache.commons.lang.RandomStringUtils;
 import org.apache.commons.lang.StringUtils;
@@ -17,13 +20,14 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @RestController
-@RequestMapping(path = "user")
+@RequestMapping(path = "user") //This annotation tells Spring MVC that this is controller which has REST endpoint
 public class UserController {
   public static final int ID_LENGTH = 10;
-
+ // @Autowired UsersCache usersCache;
   @Autowired User user;
-
   @Autowired UserService userService;
+  @Autowired private SwaggerUIDetails myConfig;
+  @Autowired private PersonInterface personService;
 
   @GetMapping(path = "searchUserByFirstName")
   public List<User> searchUserByFirstName(@RequestParam(required = true) String firstName) {
@@ -32,7 +36,7 @@ public class UserController {
   }
 
   @PostMapping(
-      value = "/insertUser",
+      path = "/insertUser",
       consumes = MediaType.APPLICATION_JSON_UTF8_VALUE,
       produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
   public User insertUser(@RequestBody User user) {
@@ -59,6 +63,31 @@ public class UserController {
     }
 
     return null;
+  }
+
+  //  @GetMapping(value = "/{name}")
+  //  public Users getUser(@PathVariable final String name) {
+  //    return usersCache.getUser(name);
+  //  }
+
+  @GetMapping(path = "/yml", produces = MediaType.APPLICATION_JSON_VALUE)
+  public SwaggerUIDetails printYaml() {
+    return myConfig;
+  }
+
+  @GetMapping("/list")
+  public List<Person> getPersonList() {
+    return personService.getListOfPeople();
+  }
+
+  @GetMapping("/sortedLastName")
+  public List<Person> getLastNameSortedList() {
+    return personService.getLastSorted();
+  }
+
+  @GetMapping(path = "/lastNameStartsWith/{startsWith}")
+  public List<Person> lastNameBeginsWithR(@PathVariable("startsWith") String startsWith) {
+    return personService.lastNameStartsWith(startsWith);
   }
 
   @GetMapping(path = "/testingException")

@@ -13,7 +13,7 @@ import org.json.simple.JSONValue;
 import org.json.simple.parser.JSONParser;
 
 public class OpenStreetMapUtils {
-  public final static Logger log = Logger.getLogger("OpenStreeMapUtils");
+  public static final Logger log = Logger.getLogger("OpenStreeMapUtils");
   private final String USER_AGENT = "Chrome";
 
   private static OpenStreetMapUtils instance = null;
@@ -103,7 +103,6 @@ public class OpenStreetMapUtils {
         log.info("lat=" + lat);
         res.put("lon", Double.parseDouble(lon));
         res.put("lat", Double.parseDouble(lat));
-
       }
     }
 

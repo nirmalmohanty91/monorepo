@@ -20,21 +20,34 @@
     </properties>
 
     <dependencies>
+        <!--springdatajpa Dependency-->
+        <!--
+        <dependency>
+            <groupId>org.springdatajpa</groupId>
+            <artifactId>springdatajpa-entitymanager</artifactId>
+        </dependency>
+        -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
-
+        <!--For /health endpoint-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-actuator</artifactId>
         </dependency>
-
+        <!--Spring Data JPA(Uses hibernate 5)-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-jpa</artifactId>
+        </dependency>
+        <!--For restarting application if any changes are made-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-devtools</artifactId>
             <optional>true</optional>
         </dependency>
+        <!--Swagger Configuration-->
 
         <dependency>
             <groupId>io.springfox</groupId>
@@ -50,27 +63,35 @@
             <scope>compile</scope>
         </dependency>
 
+        <!--Spring @Configuration-->
 
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-configuration-processor</artifactId>
             <optional>true</optional>
         </dependency>
+        <!--Spring Security-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-security</artifactId>
         </dependency>
-        <!-- Postgresql dependency -->
+        <!-- H2 DB dependency -->
+
         <dependency>
-            <groupId>com.h2database</groupId>
-            <artifactId>h2</artifactId>
-            <scope>runtime</scope>
-        </dependency>
-        <!--<dependency>
+             <groupId>com.h2database</groupId>
+             <artifactId>h2</artifactId>
+             <scope>runtime</scope>
+         </dependency>
+
+
+       <!-- Postgres dependency -->
+        <!--
+        <dependency>
             <groupId>org.postgresql</groupId>
             <artifactId>postgresql</artifactId>
-            <version>42.1.1</version>
-        </dependency> -->
+        </dependency>
+        -->
+
         <!-- https://mvnrepository.com/artifact/com.googlecode.json-simple/json-simple -->
         <dependency>
             <groupId>com.googlecode.json-simple</groupId>
@@ -91,10 +112,7 @@
             <artifactId>ehcache</artifactId>
             <version>2.10.4</version>
         </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-data-jpa</artifactId>
-        </dependency>
+
         <!-- https://mvnrepository.com/artifact/org.json/json -->
         <dependency>
             <groupId>org.json</groupId>

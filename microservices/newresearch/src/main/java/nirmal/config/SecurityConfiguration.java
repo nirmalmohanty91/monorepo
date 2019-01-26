@@ -22,6 +22,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
   @Override
   public void configure(HttpSecurity httpSecurity) throws Exception {
     httpSecurity.authorizeRequests().antMatchers(HTTP_WHITELIST).permitAll();
+    httpSecurity.headers().frameOptions().disable();
 
     httpSecurity
         .authorizeRequests()

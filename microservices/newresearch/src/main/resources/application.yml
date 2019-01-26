@@ -6,15 +6,19 @@ spring:
 env: local
 spring:
   profiles: local
+  h2:
+    console:
+      enabled: true
 details:
     title: Research
     description: I'm a dog chasing cars. I wouldn't know what to do with one if I caught it! I just do things.
     version: 1.0
 #server:
 #  context-path: /research
-security:
-  basic:
-    enabled: false
+
+#security:
+#  basic:
+#    enabled: false
 filepath:
   soucefiles:
     sourcefile1: src/main/resources/Source1.txt
