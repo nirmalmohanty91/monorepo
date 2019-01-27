@@ -11,6 +11,7 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Scanner;
 import java.util.TreeMap;
 import java.util.TreeSet;
 import java.util.function.Predicate;
@@ -164,35 +165,53 @@ public class Test {
     //
     //    System.out.println(Float.toString(value.floatValue() * 100).split("\\.")[0]);
 
-    List<Nirmal> nirmalList = new ArrayList<>();
+    //    List<Nirmal> nirmalList = new ArrayList<>();
+    //
+    //    nirmalList.add(Nirmal.builder().id(112).name("Batman").build());
+    //    nirmalList.add(Nirmal.builder().id(2).name("hello").build());
+    //    nirmalList.add(Nirmal.builder().id(92).name("Bello").build());
+    //    nirmalList.add(Nirmal.builder().id(20).name("kello").build());
+    //    nirmalList.add(Nirmal.builder().id(52).name("sello").build());
+    //    nirmalList.add(Nirmal.builder().id(23).name("you").build());
+    //
+    ////    nirmalList.sort(Comparator.comparing(x -> x.name));
+    ////    System.out.println(nirmalList);
+    //    TreeMap<Nirmal,Integer> map= new TreeMap<>();
+    //    map.put(Nirmal.builder().id(112).name("Batman").build(),1);
+    //    map.put(Nirmal.builder().id(112).name("Atman").build(),1);
+    //    System.out.println(map);
+    //
+    //    TreeSet<Nirmal> set = new TreeSet<>();
+    //    set.add(Nirmal.builder().id(112).name("Batman").build());
 
-    nirmalList.add(Nirmal.builder().id(112).name("Batman").build());
-    nirmalList.add(Nirmal.builder().id(2).name("hello").build());
-    nirmalList.add(Nirmal.builder().id(92).name("Bello").build());
-    nirmalList.add(Nirmal.builder().id(20).name("kello").build());
-    nirmalList.add(Nirmal.builder().id(52).name("sello").build());
-    nirmalList.add(Nirmal.builder().id(23).name("you").build());
+    Scanner s = new Scanner(System.in);
+    int a = s.nextInt();
+    int b = s.nextInt();
+    System.out.println(a + " : " + b);
 
-//    nirmalList.sort(Comparator.comparing(x -> x.name));
-//    System.out.println(nirmalList);
-    TreeMap<Nirmal,Integer> map= new TreeMap<>();
-    map.put(Nirmal.builder().id(112).name("Batman").build(),1);
-    map.put(Nirmal.builder().id(112).name("Atman").build(),1);
-    System.out.println(map);
 
-    TreeSet<Nirmal> set = new TreeSet<>();
-    set.add(Nirmal.builder().id(112).name("Batman").build());
+
+
+    // Write your code here
+    for(int i=1;  i<= a && i<= b; i++){
+      if(a%i ==0 && b%i ==0){
+        System.out.println(i);
+      }
+    }
+
+
+
   }
 }
 
-@Builder
-@ToString
-class Nirmal{
-  int id;
-  String name;
-
-//  @Override
-//  public int compareTo(Nirmal o) {
-//    return this.name.compareTo(o.name);
-//  }
-}
+// @Builder
+// @ToString
+// class Nirmal{
+//  int id;
+//  String name;
+//
+////  @Override
+////  public int compareTo(Nirmal o) {
+////    return this.name.compareTo(o.name);
+////  }
+// }

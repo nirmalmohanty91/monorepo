@@ -1,7 +1,9 @@
-package nirmal.web.controller;
+package nirmal.web.controller.userssystem;
 
-import nirmal.domain.models.Users;
-import nirmal.repository.UserJpaRepository;
+import nirmal.domain.models.usersystem.Users;
+import nirmal.domain.models.usersystem.UsersContact;
+import nirmal.repository.userssystem.UsersContactRepository;
+import nirmal.repository.userssystem.UsersRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -15,17 +17,23 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping("/users")
-public class UsersController {
-  @Autowired private UserJpaRepository userJpaRepository;
+public class UsersSystemQueryController {
+  @Autowired private UsersRepository usersRepository;
+  @Autowired private UsersContactRepository usersContactRepository;
 
-  @GetMapping(path = "/all")
+  @GetMapping(path = "/all-contacts")
+  public List<UsersContact> getUsersContact() {
+    return usersContactRepository.findAll();
+  }
+
+  @GetMapping(path = "/all-users")
   public List<Users> findAll() {
-    return userJpaRepository.findAll();
+    return usersRepository.findAll();
   }
 
   @GetMapping(path = "/{id}")
-  public Users findByName(@PathVariable Long id) {
-    Optional<Users> optional = userJpaRepository.findById(id);
+  public Users findById(@PathVariable Long id) {
+    Optional<Users> optional = usersRepository.findById(id);
     if (optional.isPresent()) {
       return optional.get();
     } else {
@@ -41,8 +49,8 @@ public class UsersController {
    */
   @PostMapping(path = "/load")
   public Users load(@RequestBody Users users) {
-    userJpaRepository.save(users);
-    Optional<Users> optional = userJpaRepository.findById(users.getId());
+    usersRepository.save(users);
+    Optional<Users> optional = usersRepository.findById(users.getId().longValue());
     if (optional.isPresent()) {
       return optional.get();
     } else {

@@ -1,6 +1,6 @@
 //package nirmal.cache;
 //
-//import nirmal.domain.models.Users;
+//import nirmal.domain.models.usersystem.Users;
 //import org.springframework.beans.factory.annotation.Autowired;
 //import org.springframework.cache.annotation.Cacheable;
 //import org.springframework.stereotype.Component;
