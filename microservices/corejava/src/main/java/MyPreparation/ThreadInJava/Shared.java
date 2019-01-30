@@ -1,4 +1,4 @@
-package MyPreparation.threadprograms;
+package MyPreparation.ThreadInJava;
 
 public class Shared {
 

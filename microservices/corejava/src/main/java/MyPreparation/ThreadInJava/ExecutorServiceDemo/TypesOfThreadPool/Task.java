@@ -1,4 +1,4 @@
-package MyPreparation.threadprograms.ExecutorServiceDemo.TypesOfThreadPool;
+package MyPreparation.ThreadInJava.ExecutorServiceDemo.TypesOfThreadPool;
 
 class Task implements Runnable {
 

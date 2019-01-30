@@ -1,4 +1,4 @@
-package MyPreparation.threadprograms.ExecutorServiceDemo;
+package MyPreparation.ThreadInJava.ExecutorServiceDemo;
 
 import java.util.Random;
 import java.util.concurrent.Callable;

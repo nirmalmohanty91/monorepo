@@ -1,21 +1,18 @@
-package MyPreparation.threadprograms.programs;
+package MyPreparation.ThreadInJava.programs;
 
 import java.util.stream.IntStream;
 
 // In-line declaration of run method. 2 threads performing a single task
 public class ThreadDemo4 {
   public static void main(String[] args) throws InterruptedException {
-    //Code without lambda
+    // Code without lambda
     Runnable taskWithoutLambda =
         new Runnable() {
 
           @Override
           public void run() {
             IntStream.range(1, 6)
-                .forEach(
-                    n -> {
-                      System.out.println(Thread.currentThread().getName() + ": " + n);
-                    });
+                .forEach(n -> System.out.println(Thread.currentThread().getName() + ": " + n));
           }
         };
 

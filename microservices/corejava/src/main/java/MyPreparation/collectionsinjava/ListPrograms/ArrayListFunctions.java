@@ -10,9 +10,13 @@ import java.util.ListIterator;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
-/** ArrayList is not synchronized. That means, multiple threads can use same ArrayList simultaneously.*/
+/**
+ * ArrayList is not synchronized. That means, multiple threads can use same ArrayList
+ * simultaneously.
+ */
 public class ArrayListFunctions {
   public static void main(String[] args) {
+    /**
     ArrayList<Integer> listOfIntegers1 = new ArrayList<>();
     listOfIntegers1.add(12);
     listOfIntegers1.add(40);
@@ -75,7 +79,7 @@ public class ArrayListFunctions {
     System.out.println("Last index of an element: " + listOfIntegers1.lastIndexOf(4));
 
     // Different ways to loop a list
-    /** 1. Java 7 ways */
+    // 1. Java 7 ways
     System.out.println("Using traditional for loop:");
     for (int i = 0; i < listOfIntegers1.size(); i++) {
       System.out.print(listOfIntegers1.get(i) + " ");
@@ -90,20 +94,37 @@ public class ArrayListFunctions {
     // Using Iterator, you can traverse List, Set and Queue type of objects.
     System.out.println("Using Iterator: ");
     Iterator iterator = listOfIntegers1.iterator();
-    while (iterator.hasNext()){
-      System.out.print(iterator.next()+" ");
+    while (iterator.hasNext()) {
+      System.out.print(iterator.next() + " ");
     }
     System.out.println();
-    //But, using ListIterator you can traverse the elements in both the directions – forward and backward
+    // But, using ListIterator you can traverse the elements in both the directions – forward and
+    // backward
     System.out.println("Using ListIterator - Forward Direction: ");
     ListIterator listIterator = listOfIntegers1.listIterator();
-    while (listIterator.hasNext()){
-      System.out.print(listIterator.hasPrevious()+"|"+listIterator.previousIndex()+":"+listIterator.next()+":"+listIterator.nextIndex()+"|");
+    while (listIterator.hasNext()) {
+      System.out.print(
+          listIterator.hasPrevious()
+              + "|"
+              + listIterator.previousIndex()
+              + ":"
+              + listIterator.next()
+              + ":"
+              + listIterator.nextIndex()
+              + "|");
     }
     System.out.println();
     System.out.println("Using ListIterator - Backward Direction: ");
-    while (listIterator.hasPrevious()){
-      System.out.print(listIterator.hasNext()+"|"+listIterator.nextIndex()+":"+listIterator.previous()+":"+listIterator.previousIndex()+"|");
+    while (listIterator.hasPrevious()) {
+      System.out.print(
+          listIterator.hasNext()
+              + "|"
+              + listIterator.nextIndex()
+              + ":"
+              + listIterator.previous()
+              + ":"
+              + listIterator.previousIndex()
+              + "|");
     }
     System.out.println();
 
@@ -111,21 +132,21 @@ public class ArrayListFunctions {
     // Iterator.
     System.out.println("Iterating from particular index");
     ListIterator listIterator1 = listOfIntegers1.listIterator(2);
-    while (listIterator1.hasNext()){
-      System.out.print(listIterator1.next()+" ");
+    while (listIterator1.hasNext()) {
+      System.out.print(listIterator1.next() + " ");
     }
     System.out.println();
     System.out.println("Using ListIterator - Modify Elements: ");
-    while (listIterator.hasNext()){
-      Integer i = (int)listIterator.next();
-      listIterator.set(i+4);
+    while (listIterator.hasNext()) {
+      Integer i = (int) listIterator.next();
+      listIterator.set(i + 4);
     }
     System.out.println(listOfIntegers1);
-    //listOfIntegers1.add(23); //ConcurrentModificationException
+    // listOfIntegers1.add(23); //ConcurrentModificationException
 
     System.out.println("Using Iterator - Remove Elements: (This doesn't work using ListIterator)");
     Iterator iterator1 = listOfIntegers1.iterator();
-    while (iterator1.hasNext()){
+    while (iterator1.hasNext()) {
       iterator1.next();
       iterator1.remove();
     }
@@ -138,12 +159,15 @@ public class ArrayListFunctions {
     System.out.println("Clearing list...");
     listOfIntegers1.clear();
 
-    //adding array to a list
-    Integer[] intArray = {12,34,65};
+    // adding array to a list
+    Integer[] intArray = {12, 34, 65};
     listOfIntegers1.addAll(Arrays.asList(intArray));
     System.out.println(listOfIntegers1);
-    /** 1. Java 8 ways of looping */
+    */
+    ArrayList<Integer> newList = new ArrayList<>();
 
-
+    newList.add(0, 1);
+    newList.add(1, 3);
+    System.out.println(newList);
   }
 }
