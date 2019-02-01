@@ -16,7 +16,7 @@ import java.util.stream.IntStream;
  */
 public class ArrayListFunctions {
   public static void main(String[] args) {
-    /**
+
     ArrayList<Integer> listOfIntegers1 = new ArrayList<>();
     listOfIntegers1.add(12);
     listOfIntegers1.add(40);
@@ -163,7 +163,7 @@ public class ArrayListFunctions {
     Integer[] intArray = {12, 34, 65};
     listOfIntegers1.addAll(Arrays.asList(intArray));
     System.out.println(listOfIntegers1);
-    */
+
     ArrayList<Integer> newList = new ArrayList<>();
 
     newList.add(0, 1);
