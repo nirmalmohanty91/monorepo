@@ -21,7 +21,7 @@ public class FibonacciSeries {
     while (count <= n) {
 
       f = f1 + f2;
-      System.out.println(f);
+      System.out.print(f+" ");
       f1 = f2;
       f2 = f;
       count++;

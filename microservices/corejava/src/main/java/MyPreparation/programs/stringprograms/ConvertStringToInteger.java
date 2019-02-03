@@ -1,4 +1,4 @@
-package interviewquestions.Oracle;
+package MyPreparation.programs.stringprograms;
 
 public class ConvertStringToInteger {
   public static void main(String[] args) {

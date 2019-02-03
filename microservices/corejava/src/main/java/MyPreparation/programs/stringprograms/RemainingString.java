@@ -1,4 +1,4 @@
-package interviewquestions.Oracle;
+package MyPreparation.programs.stringprograms;
 
 import java.util.Scanner;
 

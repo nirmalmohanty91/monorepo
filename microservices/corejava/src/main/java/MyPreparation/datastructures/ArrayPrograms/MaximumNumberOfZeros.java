@@ -1,4 +1,4 @@
-package interviewquestions.Oracle;
+package MyPreparation.datastructures.ArrayPrograms;
 
 public class MaximumNumberOfZeros {
 

@@ -1,4 +1,4 @@
-package interviewquestions.Oracle;
+package MyPreparation.programs.stringprograms;
 
 /** Convert String "1234" to number 1234 */
 public class ConvertStringToNumber {

@@ -70,7 +70,11 @@ public class DriverClass {
 
     // Creating object of abstract class
 
-    Class abstractClass = AbstractClass.class;
+//    Class abstractClass = AbstractClass.class;
+//    AbstractClass abs = (AbstractClass) abstractClass.newInstance();
+//    Method m1 = abstractClass.getDeclaredMethod("getName");
+//    m1.invoke(abs);
+
 
 
   }

@@ -7,16 +7,16 @@ public class StringReverse {
     String str = "I Am Not String";
 
     System.out.println(reverseCharArray(str));
-    System.out.println(reverseSentence(str));
+    //System.out.println(reverseSentence(str));
   }
 
   static String reverseCharArray(String str) {
     char[] letters = str.toCharArray();
-    String s = "";
+    StringBuffer s = new StringBuffer();
     for (int i = letters.length - 1; i >= 0; i--) {
-      s += letters[i];
+      s.append(letters[i]);
     }
-    return s;
+    return s.toString();
   }
 
   static String reverseSentence(String str) {

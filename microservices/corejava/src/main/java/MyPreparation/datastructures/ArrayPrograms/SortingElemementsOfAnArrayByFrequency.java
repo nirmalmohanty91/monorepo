@@ -1,12 +1,9 @@
-package interviewquestions.Oracle;
-
-import utils.Utility;
+package MyPreparation.datastructures.ArrayPrograms;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Scanner;
 
 public class SortingElemementsOfAnArrayByFrequency {
 
