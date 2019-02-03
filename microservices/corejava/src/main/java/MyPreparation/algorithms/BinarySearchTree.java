@@ -1,4 +1,8 @@
 package MyPreparation.algorithms;
+
+import java.util.LinkedList;
+import java.util.Queue;
+
 /**
  * Binary tree is a tree in which each node can have at most 2 children. Some restrictions to BT is
  * called Binary Search Tree. The rule is: BST is a BT in which for each node value of all the nodes
@@ -38,6 +42,8 @@ public class BinarySearchTree {
     bstOperations.inOrder(root);
     System.out.println("\nPost-order:");
     bstOperations.postOrder(root);
+    System.out.println("\nlevel-order:");
+    bstOperations.levelOrder(root);
   }
 }
 
@@ -120,7 +126,7 @@ class BST {
     }
   }
 
-  // Tree Traversal
+  // Tree Traversal : Depth- first
   // PreOrder[root -> left-subtree -> right-subtree]
   public void preOrder(Node root) {
     if (root == null) {
@@ -149,6 +155,27 @@ class BST {
     postOrder(root.left);
     preOrder(root.right);
     System.out.print(root.data + " ");
+  }
+
+  // Tree Traversal : Breadth - first
+  public void levelOrder(Node root) {
+    if (root == null) {
+      return;
+    }
+    LinkedList<Node> queue = new LinkedList<>();
+    queue.offer(root);
+
+    while (!queue.isEmpty()) {
+      // To retrieve & remove the element first pushed to queue
+      Node current = queue.pollLast();
+      System.out.print(current.data + " ");
+      if (current.left != null) {
+        queue.offer(current.left);
+      }
+      if (current.right != null) {
+        queue.offer(current.right);
+      }
+    }
   }
 }
 
