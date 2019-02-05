@@ -5,18 +5,18 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.stream.Collectors;
 
-public class PrintUniqueElements {
+public class RemoveDuplicatesFromArray {
 
   public static void main(String[] args) {
 
     int[] arr = {21, 3, 10, 4, 3, 3, 21, 54, 4, 6, 6, 6, 54, 54, 54, 54, 54, 54};
     // System.out.println(arr.length);
-    // PrintUniqueElements.printUniqueElements(arr);
+   // PrintUniqueElements.printUniqueElements(arr);
     // System.out.println();
-    // UniqueElements.printUniqueElementsBySorting(arr);
+    RemoveDuplicatesFromArray.printUniqueElementsBySorting(arr);
     // System.out.println("Using HashTable(HashMap/HashSet): ");
     // PrintUniqueElements.printUniqueElmentsUsingHashSet2(arr);
-    PrintUniqueElements.printUniqueElmentsUsingHashMap3(arr);
+   // PrintUniqueElements.printUniqueElmentsUsingHashMap2(arr);
   }
   /** O(n2) */
   public static void printUniqueElements(int[] arr) {
