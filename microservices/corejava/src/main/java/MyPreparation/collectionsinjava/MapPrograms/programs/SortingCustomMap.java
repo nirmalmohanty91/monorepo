@@ -14,7 +14,7 @@ public class SortingCustomMap {
   public int b;
 
   public static TreeMap<Integer, Employee> sortMapByValue(HashMap<Integer, Employee> map) {
-    Comparator<Integer> comparator = new ValueComparator(map);
+    Comparator<Integer> comparator = new SalaryComparator(map);
     // TreeMap is a map sorted by its keys.
     // The comparator is used to sort the TreeMap by keys.
     TreeMap<Integer, Employee> result = new TreeMap<>(comparator);
@@ -71,11 +71,11 @@ class Employee {
   public int salary;
 }
 
-class ValueComparator implements Comparator<Integer> {
+class SalaryComparator implements Comparator<Integer> {
 
   HashMap<Integer, Employee> map = new HashMap<>();
 
-  public ValueComparator(HashMap<Integer, Employee> map) {
+  public SalaryComparator(HashMap<Integer, Employee> map) {
     this.map.putAll(map);
   }
 
