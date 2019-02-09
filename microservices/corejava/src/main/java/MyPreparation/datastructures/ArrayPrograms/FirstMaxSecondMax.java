@@ -3,8 +3,8 @@ package MyPreparation.datastructures.ArrayPrograms;
 public class FirstMaxSecondMax {
 
   public static void main(String[] args) {
-    int[] arr = {50, 79, 10, 100, 45, 23, 69, 34};
-    // int[] arr = {-2, 2, 2, 2, 2, 2, 2};
+    //int[] arr = {50, 79, 10, 100, 45, 23, 69, 34};
+     int[] arr = {-2, 2, 2, 2, 2, 2, 2};
     FirstMaxSecondMax.printFirstAndSecondLargest(arr);
   }
 

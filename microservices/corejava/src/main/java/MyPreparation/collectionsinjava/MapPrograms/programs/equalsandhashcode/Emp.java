@@ -15,7 +15,7 @@ public class Emp {
   @Override
   public boolean equals(Object o) {
     System.out.println("equals() called...");
-    if (this == o) return true;
+    //if (this == o) return true;
     if (o == null || getClass() != o.getClass()) return false;
 
     Emp emp = (Emp) o;

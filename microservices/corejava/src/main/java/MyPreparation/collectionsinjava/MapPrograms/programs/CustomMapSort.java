@@ -39,8 +39,9 @@ public class CustomMapSort {
           }
         });
     */
-    // Java 8 supports list.sort() directly. So no need to use Collection.sort() anymore
-    list.sort((Map.Entry<String, Employee> o1, Map.Entry<String, Employee> o2) -> o1.getValue().getName().compareTo(o2.getValue().getName()));
+    /** Java 8 supports list.sort() directly. So no need to use Collection.sort() anymore */
+    //list.sort((Map.Entry<String, Employee> o1, Map.Entry<String, Employee> o2) -> o1.getValue().getName().compareTo(o2.getValue().getName()));
+    list.sort(Comparator.comparing(x->x.getValue().getName()));
     //Can further simplified as below
     //list.sort(Comparator.comparing(Map.Entry<String, Employee> :: ));
     // 3. Loop the sorted list and put it into a new insertion order Map LinkedHashMap

@@ -7,11 +7,16 @@ import java.util.Queue;
  * Binary tree is a tree in which each node can have at most 2 children. Some restrictions to BT is
  * called Binary Search Tree. The rule is: BST is a BT in which for each node value of all the nodes
  * in the left sub-tree is lesser or equal and value of all the nodes in the right sub-tree is
- * greater. ###############################
+ * greater.
+ * ###############################
  *
- * <p>Binary Tree Traversal: 1. Breadth-First: A. Level-Order 2. Depth-First A. PreOrder[root ->
- * left-subtree -> right-subtree] B. InOrder[left-subtree -> root -> right-subtree] C.
- * PostOrder[left-subtree -> right-subtree -> root]
+ * Binary Tree Traversal:
+ *  1. Breadth-First:
+ *     A. Level-Order
+ *  2. Depth-First
+ *     A. PreOrder[root ->left-subtree -> right-subtree]
+ *     B. InOrder[left-subtree -> root -> right-subtree]
+ *     C. PostOrder[left-subtree -> right-subtree -> root]
  */
 public class BinarySearchTree {
 
