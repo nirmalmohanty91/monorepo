@@ -5,15 +5,12 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.OneToOne;
-import javax.persistence.Table;
+import javax.validation.constraints.NotBlank;
 
 @Builder
 @Data
@@ -26,9 +23,5 @@ public class UsersContact {
   @Column(name = "id")
   private Integer id;
 
-  private Integer phoneNo;
-  // Entity Mapping
-  @OneToOne(cascade = CascadeType.ALL)
-  @JoinColumn(name = "id",referencedColumnName = "id")
-  private Users users;
+  @NotBlank private Integer phoneNo;
 }
