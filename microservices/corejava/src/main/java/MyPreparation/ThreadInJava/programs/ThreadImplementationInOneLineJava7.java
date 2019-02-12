@@ -3,7 +3,7 @@ package MyPreparation.ThreadInJava.programs;
 import java.util.stream.IntStream;
 
 // Most compact way of implementing thread with minimum code
-public class ThreadDemo5 {
+public class ThreadImplementationInOneLineJava7 {
   public static void main(String[] args) {
     Thread t1 =
         new Thread(

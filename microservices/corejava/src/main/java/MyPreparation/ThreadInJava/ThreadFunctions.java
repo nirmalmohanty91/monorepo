@@ -31,37 +31,7 @@ public class ThreadFunctions {
     t.start();
     System.out.println("Status after thread starts: " + t.getState());
 
-    final Shared s1 = new Shared();
-    final Shared s2 = new Shared();
 
-    Thread t1 =
-        new Thread() {
-          @Override
-          public void run() {
-            System.out.println("Call from main method:");
-            s1.methodOne(s2);
-          }
-        };
-
-    Thread t2 =
-        new Thread() {
-          @Override
-          public void run() {
-            System.out.println("Call from main method: ");
-            s2.methodTwo(s1);
-          }
-        };
-    System.out.println("Starting t1 & t2: ");
-    t1.start();
-    t2.start();
-
-    try {
-      Thread.sleep(3000);
-    } catch (InterruptedException e) {
-      e.printStackTrace();
-    }
-    System.out.println("State of t1: " + t.getState());
-    System.out.println("State of t2: " + t2.getState());
 
   }
 }

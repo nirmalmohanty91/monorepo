@@ -3,7 +3,7 @@ package MyPreparation.ThreadInJava.programs;
 import java.util.stream.IntStream;
 
 // Implementing threading using lambda
-public class ThreadDemo6 {
+public class ThreadUsingLambda {
   public static void main(String[] args) {
     // Lambda Runnable
     Runnable task1 =

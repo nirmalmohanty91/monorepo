@@ -5,6 +5,7 @@ import nirmal.domain.models.usersystem.UsersContact;
 import nirmal.repository.userssystem.UsersContactRepository;
 import nirmal.repository.userssystem.UsersRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -14,7 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 import java.util.Optional;
-
+@CrossOrigin
 @RestController
 @RequestMapping("/users")
 public class UsersSystemQueryController {
