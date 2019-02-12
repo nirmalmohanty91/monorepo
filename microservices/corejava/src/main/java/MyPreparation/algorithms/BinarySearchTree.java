@@ -1,9 +1,15 @@
 package MyPreparation.algorithms;
 
 import java.util.LinkedList;
+import java.util.List;
 import java.util.Queue;
 
 /**
+ * Balanced Binary Tree
+ * Height of left and right tree differs at most by 1
+ * O(logn)
+ *
+ *
  * Binary tree is a tree in which each node can have at most 2 children. Some restrictions to BT is
  * called Binary Search Tree. The rule is: BST is a BT in which for each node value of all the nodes
  * in the left sub-tree is lesser or equal and value of all the nodes in the right sub-tree is
@@ -32,7 +38,7 @@ public class BinarySearchTree {
     root = bstOperations.insert(root, 17);
     root = bstOperations.insert(root, 25);
     // Searching
-    System.out.println(bstOperations.search(root, 100));
+    //System.out.println(bstOperations.search(root, 100));
     // Finding the Min value in BST
     // root = bstOperations.findMin(root);
     // Deletion
@@ -49,6 +55,7 @@ public class BinarySearchTree {
     bstOperations.postOrder(root);
     System.out.println("\nlevel-order:");
     bstOperations.levelOrder(root);
+    System.out.println("\n Number of leaf nodes: "+bstOperations.countLeafNodes(root));
   }
 }
 
@@ -160,6 +167,30 @@ class BST {
     postOrder(root.left);
     preOrder(root.right);
     System.out.print(root.data + " ");
+  }
+
+  public int countLeafNodes(Node root){
+    LinkedList<Node> queue = new LinkedList<>();
+    int count =0;
+    queue.offerFirst(root);
+    while (!queue.isEmpty()){
+      Node temp = queue.pollLast();
+
+      if(temp.left !=null){
+        queue.offerFirst(temp.left);
+      }
+
+      if(temp.right !=null){
+        queue.offerFirst(temp.right);
+      }
+
+      if(temp.left == null && temp.right ==null){
+        count++;
+      }
+
+    }
+   return count;
+
   }
 
   // Tree Traversal : Breadth - first
