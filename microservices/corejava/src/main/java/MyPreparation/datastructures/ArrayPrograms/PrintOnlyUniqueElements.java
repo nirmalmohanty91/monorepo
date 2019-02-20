@@ -5,7 +5,7 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.stream.Collectors;
 
-public class RemoveDuplicatesFromArray {
+public class PrintOnlyUniqueElements {
 
   public static void main(String[] args) {
 
@@ -13,7 +13,7 @@ public class RemoveDuplicatesFromArray {
     // System.out.println(arr.length);
     // PrintUniqueElements.printUniqueElements(arr);
     // System.out.println();
-    RemoveDuplicatesFromArray.printUniqueElementsBySorting(arr);
+    PrintOnlyUniqueElements.printUniqueElementsBySorting(arr);
     // System.out.println("Using HashTable(HashMap/HashSet): ");
     // PrintUniqueElements.printUniqueElmentsUsingHashSet2(arr);
     // PrintUniqueElements.printUniqueElmentsUsingHashMap2(arr);

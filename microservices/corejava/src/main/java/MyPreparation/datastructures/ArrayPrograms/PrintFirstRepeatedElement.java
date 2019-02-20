@@ -1,12 +1,12 @@
 package MyPreparation.datastructures.ArrayPrograms;
 
-public class FirstRepeatedElement {
+public class PrintFirstRepeatedElement {
 
   public static void main(String[] args) {
 
-    //int[] a = {1, 5, 3, 4, 3, 5, 6};
-      int[] a = {1, 5, 3, 4, 6};
-    FirstRepeatedElement.findFistRepeatingElement(a);
+    int[] a = {3, 1, 5, 3, 4, 3, 5, 6};
+     // int[] a = {1, 5, 3, 4, 6};
+    PrintFirstRepeatedElement.findFistRepeatingElement(a);
   }
 
   public static void findFistRepeatingElement(int[] a) {

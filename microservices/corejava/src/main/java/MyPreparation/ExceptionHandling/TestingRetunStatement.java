@@ -14,7 +14,7 @@ public class TestingRetunStatement {
       return 2;
 
     } finally {
-      System.exit(0);
+      //System.exit(0);
       return 3;
     }
   }

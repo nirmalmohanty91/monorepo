@@ -15,17 +15,25 @@ public class ArrayListInJava8 {
   // Question: Give me a list of elements from the original list with odd indexed values multiplied
   // by 2
   public static void iterateListUsingIndex(List<Integer> list) {
+//    List<Integer> filteredList =
+//        IntStream.range(0, list.size())
+//            .filter(i -> i % 2 != 0)
+//            .mapToObj(i -> (Integer) list.toArray()[i] * 2)
+//            .collect(Collectors.toList());
     List<Integer> filteredList =
-        IntStream.range(0, list.size())
-            .filter(i -> i % 2 != 0)
-            .mapToObj(i -> (Integer) list.toArray()[i] * 2)
-            .collect(Collectors.toList());
+            IntStream.range(0, list.size())
+                    .filter(i -> i % 2 != 0)
+                    .mapToObj(i -> list.get(i) * 2)
+                    .collect(Collectors.toList());
     System.out.println(filteredList);
   }
 
   public static void loopingInJava8(List<Integer> list) {
     System.out.println("Looping happens in order: ");
     list.forEach(x -> System.out.print(x + " "));
+
+    System.out.println("\nLooping happens randomly: ");
+    list.stream().forEach(x -> System.out.print(x + " "));
 
     System.out.println("\nGuarantee ordering of streams elements: ");
     list.stream().forEachOrdered(x -> System.out.print(x + " "));
@@ -36,7 +44,6 @@ public class ArrayListInJava8 {
     System.out.println("\nDoesn't guarantee ordering: ");
     list.parallelStream().forEach(x -> System.out.print(x + " "));
 
-    System.out.println("\nLooping happens randomly: ");
-    list.stream().forEach(x -> System.out.print(x + " "));
+
   }
 }

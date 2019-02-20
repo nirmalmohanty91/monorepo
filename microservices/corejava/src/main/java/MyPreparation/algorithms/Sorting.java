@@ -51,7 +51,27 @@ public class Sorting {
           isSorted = false;
         }
       }
-      Utility.printArray(numbers, i);
+     // Utility.printArray(numbers, i);
+
+      if (isSorted) {
+        break;
+      }
+    }
+    return numbers;
+  }
+
+  public static int[] reverseBubble(int[] numbers) {
+    for (int i = 0; i < numbers.length; i++) {
+      boolean isSorted = true;
+      for (int j = 0; j < numbers.length - i - 1; j++) {
+        if (numbers[j] < numbers[j + 1]) {
+          int temp = numbers[j + 1];
+          numbers[j + 1] = numbers[j];
+          numbers[j] = temp;
+          isSorted = false;
+        }
+      }
+     // Utility.printArray(numbers, i);
 
       if (isSorted) {
         break;

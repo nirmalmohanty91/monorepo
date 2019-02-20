@@ -2,12 +2,12 @@ package MyPreparation.datastructures.ArrayPrograms;
 
 import java.util.HashMap;
 
-public class PrintOnlyRepeatingElements {
+public class PrintOnlyDuplicateElements {
   public static void main(String[] args) {
     int[] arr = {100,21, 3, 10, 4, 3, 3, 21, 54, 4, 6, 6, 6, 54, 54, 54, 54, 54, 54};
     // int arr[] = {1, 2, 3, 1, 3, 6, 6};
 
-    PrintOnlyRepeatingElements.printRepeating2(arr, arr.length);
+    PrintOnlyDuplicateElements.printRepeating2(arr, arr.length);
   }
 
   /** O(n2) */

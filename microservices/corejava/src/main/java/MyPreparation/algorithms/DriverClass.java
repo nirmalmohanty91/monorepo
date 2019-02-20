@@ -1,5 +1,7 @@
 package MyPreparation.algorithms;
 
+import utils.Utility;
+
 public class DriverClass {
 
   public static void main(String[] args) {
@@ -8,7 +10,8 @@ public class DriverClass {
     // int[] numbers = new int[] {12, 89, 1, 67, 5, 23};
     // int[] numbers = {12, 89, 1, 67, 5, 23};
     int[] numbers = {2, 7, 1, 6, 8, 5, 3, 4};
-
+    Utility.printArray(Sorting.reverseBubble(numbers));
+    Utility.printArray(Sorting.bubbleSort3(numbers));
     int[] numbers1 = {1, 2, 3};
     // Sorting.mergeSort(numbers);
 
@@ -20,7 +23,8 @@ public class DriverClass {
     int[] intArray = {78, 32, 12, 98, 67};
     // System.out.println(Searching.linearSearch(intArray, 78));
     // For Binary Search the input array should be a sorted one;
-    int[] sortedArray = Sorting.bubbleSort1(intArray);
-    System.out.println(Searching.binarySearch(sortedArray, 120));
+    //int[] sortedArray = Sorting.bubbleSort1(intArray);
+    //System.out.println(Searching.binarySearch(sortedArray, 120));
+
   }
 }
