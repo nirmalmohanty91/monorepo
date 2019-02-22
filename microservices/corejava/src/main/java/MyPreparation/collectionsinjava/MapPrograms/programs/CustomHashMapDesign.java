@@ -27,7 +27,7 @@ class MyMap<K, V>{
       //  Map.Entry<K,V> entry = new Map.Entry<>(key,value,null);
         int bucket = key.hashCode() % buckets.length;
      System.out.println(bucket);
-     
+
     }
 
 }
