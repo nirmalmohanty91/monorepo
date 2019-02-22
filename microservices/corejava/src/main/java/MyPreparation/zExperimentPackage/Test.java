@@ -5,6 +5,7 @@ import lombok.ToString;
 import models.Employee;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 
+import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
@@ -137,7 +138,7 @@ public class Test {
     //    lit.add(jo1);
     //    lit.add(jo3);
     //
-    //    BigDecimal n = new BigDecimal(100.893);
+       BigDecimal n = new BigDecimal(100.893);
     //    System.out.println((n.floatValue()*100));
 
     //    String s1 = null;
