@@ -2,6 +2,7 @@ package interviewquestions.$2second.gap;
 
 public class EvenOddPrintTwoThread {
   public static void main(String[] args) {
+    
     Thread t1 = new Thread(new MyRunnable(), "T1");
     Thread t2 = new Thread(new MyRunnable(), "T2");
     t1.start();
