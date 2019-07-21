@@ -14,7 +14,6 @@ public class SystemOut {
      *      b. public void println(String x)
      *      c. public void println(Object x)
      *      All these methods can accept null & it creates an ambiguity when you pass it to the println
-     *      All these methods can accept null & it creates an ambiguity when you pass it to the println
      * */
     System.out.println();
   }

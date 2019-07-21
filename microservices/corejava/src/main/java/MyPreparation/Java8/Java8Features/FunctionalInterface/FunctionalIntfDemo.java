@@ -1,4 +1,5 @@
 package MyPreparation.Java8.Java8Features.FunctionalInterface;
+
 // New in java 8. we can have method implementations as well as static methods in java 8 :)
 // @$2FunctionalInterface annotation is optional. But if you use this, the advantage is the compiler
 // will yell at you if you violate any rule
@@ -6,11 +7,12 @@ package MyPreparation.Java8.Java8Features.FunctionalInterface;
 @FunctionalInterface
 public interface FunctionalIntfDemo {
 
-  public void m1();
+    void m1();
 
-  default void m2() {
-    System.out.println("Hello");
-  }
+    default void m2() {
+        System.out.println("Hello");
+    }
 
-  public static void m3() {}
+    static void m3() {
+    }
 }

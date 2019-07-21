@@ -5,7 +5,7 @@ public interface FIWrtInheritance {
 
   public void m1();
   //public void m4(int a);
-  public boolean equals(Object obj);
+ // public boolean equals(Object obj);
 
   default void m2() {
     System.out.println("Hello");

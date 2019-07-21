@@ -1,22 +1,10 @@
 package MyPreparation.zExperimentPackage;
 
-import lombok.Builder;
-import lombok.ToString;
-import models.Employee;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.HashMap;
-import java.util.List;
 import java.util.Scanner;
-import java.util.TreeMap;
-import java.util.TreeSet;
-import java.util.function.Predicate;
-import java.util.stream.IntStream;
 
 @ControllerAdvice
 public class Test {
