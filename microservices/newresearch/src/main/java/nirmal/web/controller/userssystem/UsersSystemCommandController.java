@@ -1,6 +1,6 @@
 package nirmal.web.controller.userssystem;
 
-import nirmal.domain.models.usersystem.Users;
+import nirmal.entity.usersystem.Users;
 import nirmal.repository.userssystem.UsersRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;

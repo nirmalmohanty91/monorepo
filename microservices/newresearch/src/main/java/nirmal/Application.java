@@ -1,7 +1,7 @@
 package nirmal;
 
 import lombok.extern.slf4j.Slf4j;
-import nirmal.domain.models.reviewsystem.Course;
+import nirmal.entity.reviewsystem.Course;
 import nirmal.repository.reviewsystem.CourseJpaRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -9,8 +9,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-
-import java.util.Optional;
 
 @Slf4j
 @SpringBootApplication

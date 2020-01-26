@@ -1,6 +1,6 @@
 package nirmal.loader;
 
-import nirmal.domain.models.usersystem.Users;
+import nirmal.entity.usersystem.Users;
 import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;

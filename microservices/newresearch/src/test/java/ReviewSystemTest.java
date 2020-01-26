@@ -1,5 +1,6 @@
 import nirmal.Application;
 import nirmal.repository.reviewsystem.CourseJpaRepository;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.Assert;
@@ -16,6 +17,7 @@ public class ReviewSystemTest {
   @Autowired CourseJpaRepository courseJpaRepository;
 
   @Test
+  @Ignore
   public void contextLoads() {
     logger.info("Test is running");
     Assert.assertEquals("Angular", courseJpaRepository.findById(4l).get().getName());

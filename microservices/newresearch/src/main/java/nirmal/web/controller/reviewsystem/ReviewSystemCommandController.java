@@ -1,7 +1,7 @@
 package nirmal.web.controller.reviewsystem;
 
-import nirmal.domain.models.reviewsystem.Course;
-import nirmal.domain.models.reviewsystem.Review;
+import nirmal.entity.reviewsystem.Course;
+import nirmal.entity.reviewsystem.Review;
 import nirmal.repository.reviewsystem.CourseJpaRepository;
 import nirmal.repository.reviewsystem.ReviewJpaRepository;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -1,6 +1,6 @@
 package nirmal.repository.userssystem;
 
-import nirmal.domain.models.usersystem.Users;
+import nirmal.entity.usersystem.Users;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

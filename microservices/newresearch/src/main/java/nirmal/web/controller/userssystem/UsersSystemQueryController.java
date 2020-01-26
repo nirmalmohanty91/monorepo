@@ -1,7 +1,7 @@
 package nirmal.web.controller.userssystem;
 
-import nirmal.domain.models.usersystem.Users;
-import nirmal.domain.models.usersystem.UsersContact;
+import nirmal.entity.usersystem.Users;
+import nirmal.entity.usersystem.UsersContact;
 import nirmal.repository.userssystem.UsersContactRepository;
 import nirmal.repository.userssystem.UsersRepository;
 import org.springframework.beans.factory.annotation.Autowired;
