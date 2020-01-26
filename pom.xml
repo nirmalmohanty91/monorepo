@@ -26,6 +26,7 @@
     <modules>
         <module>monorepo-starters</module>
         <module>microservices</module>
+        <module>cracking.coding.interview</module>
     </modules>
 
     <dependencies>
