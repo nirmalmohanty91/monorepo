@@ -4,7 +4,9 @@ import org.springframework.web.bind.annotation.ControllerAdvice;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Scanner;
+import java.util.stream.Stream;
 
 @ControllerAdvice
 public class Test {
@@ -173,24 +175,33 @@ public class Test {
     //    TreeSet<Nirmal> set = new TreeSet<>();
     //    set.add(Nirmal.builder().id(112).name("Batman").build());
 
-    Scanner s = new Scanner(System.in);
-    int a = s.nextInt();
-    int b = s.nextInt();
-    System.out.println(a + " : " + b);
+//    Scanner s = new Scanner(System.in);
+//    int a = s.nextInt();
+//    int b = s.nextInt();
+//    System.out.println(a + " : " + b);
 
 
 
 
     // Write your code here
-    for(int i=1;  i<= a && i<= b; i++){
-      if(a%i ==0 && b%i ==0){
-        System.out.println(i);
+//    for(int i=1;  i<= a && i<= b; i++){
+//      if(a%i ==0 && b%i ==0){
+//        System.out.println(i);
+//      }
+//    }
+
+//      int[] array = {2, 4, 6, 2, 46, 2, 2};
+//      if(Arrays.stream(array).boxed().anyMatch(x-> x==2)){
+//          System.out.println("found it");
+//      }
+
+    for(int i = 0, j = 0; i < 7; i++){
+      System.out.println("i:"+i);
+      for(; j < 6; j++){
+        System.out.println(i+":"+j);
       }
-    }
 
-
-
-  }
+  }}
 }
 
 // @Builder
