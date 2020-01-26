@@ -25,7 +25,7 @@
 
     <modules>
         <module>microservices</module>
-        <module>cracking.coding.interview</module>
+        <module>codinginterview</module>
     </modules>
 
     <dependencies>
