@@ -1,4 +1,4 @@
-package MyPreparation.programs.numberprograms;
+package MyPreparation.numberprograms;
 
 public class AddTwoNumberWithoutUsingArithmatic {
 

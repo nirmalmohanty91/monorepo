@@ -1,25 +1,24 @@
-package MyPreparation.programs.numberprograms;
+package MyPreparation.numberprograms;
 
-import java.util.ArrayList;
-
-public class PrintingPrimeNumber3 {
+public class PrintingPrimeNumber {
 
   public static void main(String[] args) {
-    ArrayList<Integer> primeList = new ArrayList<>(); // version 3
+    int count = 0;
     long start = System.currentTimeMillis();
     for (int i = 2; i <= 1000; i++) {
       boolean isPrime = true;
       for (int j = 2; j < i; j++) {
         if (i % j == 0) {
           isPrime = false;
-          break; // version 2
         }
       }
-      if (isPrime) primeList.add(i); // version 3
+      if (isPrime) {
+        count++;
+        System.out.print(i + " ");
+      }
     }
-
-    System.out.println(primeList);
     long end = System.currentTimeMillis();
+    System.out.println("\n" + count);
     System.out.println(end - start);
   }
 }
