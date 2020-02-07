@@ -1,4 +1,4 @@
-package MyPreparation.numberprograms;
+package MyPreparation.numberprograms.other;
 
 import java.io.BufferedReader;
 import java.io.IOException;
