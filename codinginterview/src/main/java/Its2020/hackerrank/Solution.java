@@ -1,4 +1,4 @@
-package hackerrank;
+package Its2020.hackerrank;
 
 import java.io.*;
 
