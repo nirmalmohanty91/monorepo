@@ -3,6 +3,7 @@ package utils;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
+import java.util.stream.IntStream;
 
 public class Utility {
 
@@ -14,6 +15,11 @@ public class Utility {
 
   public static void printArray(String[] arr) {
     Arrays.stream(arr).forEach(a -> System.out.print(a + " "));
+    System.out.println();
+  }
+
+  public static void printArray(boolean[] arr) {
+    IntStream.range(0,arr.length).forEach(i -> System.out.print(arr[i]+ " "));
     System.out.println();
   }
 
